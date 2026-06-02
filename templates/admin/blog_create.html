@@ -1,0 +1,19 @@
+{% extends 'admin/model/create.html' %}
+
+{% block tail %}
+  {{ super() }}
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const editorField = document.querySelector('textarea[name="content"]')
+    
+      if (editorField) {
+        ClassicEditor.create(editorField).catch((error) => {
+          console.error(error)
+        })
+      }
+    })
+  </script>
+{% endblock %}

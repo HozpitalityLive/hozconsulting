@@ -1,0 +1,769 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}
+  Hospitality Consulting & Hotel Advisory | Hozpitality Consulting
+{% endblock %}
+
+{% block meta_description %}
+  Hozpitality Consulting helps hotel owners and hospitality businesses explore hospitality growth opportunities, branding strategies, hospitality networking, and industry partnerships.
+{% endblock %}
+
+{% block content %}
+  <!-- home2 Banner Section Start -->
+  <div class="home2-banner-section">
+    <div class="swiper home2-banner-slider">
+      <div class="swiper-wrapper">
+        {# 
+        <div class="swiper-slide">
+          <div class="banner-warpper">
+            <div class="banner-bg">
+              <img src="{{ url_for('static', filename='assets/img/home2/home2-banner-img2.jpg') }}" alt="" />
+            </div>
+            <div class="banner-content-wrap">
+              <div class="container one">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="banner-content">
+                      <div class="banner-title-area">
+                        <span>energy & Infrastructure</span>
+                        <h1>Advisory for High-Performance Businesses.</h1>
+                        <a href="industry-details.html" class="primary-btn3 two">
+                          <span data-text="See how we help">See how we help</span>
+                          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" />
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="banner-warpper">
+            <div class="banner-bg">
+              <img src="{{ url_for('static', filename='assets/img/home2/home2-banner-img1.jpg') }}" alt="" />
+            </div>
+            <div class="banner-content-wrap">
+              <div class="container one">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="banner-content">
+                      <div class="banner-title-area">
+                        <span>Helping hospitality businesses</span>
+                        <h2>Empowering the Future of Medical Innovation.</h2>
+                        <a href="industry-details.html" class="primary-btn3 two">
+                          <span data-text="Schedule a Consultation">Schedule a Consultation</span>
+                          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" />
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        #}
+        <div class="swiper-slide">
+          <div class="banner-warpper">
+            <div class="banner-bg">
+              <video autoplay loop muted playsinline src="{{ url_for('static', filename='assets/video/home2-banner-video.mp4') }}"></video>
+            </div>
+            <div class="banner-content-wrap">
+              <div class="container one">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="banner-content">
+                      <div class="banner-title-area">
+                        <span>Helping hospitality businesses</span>
+                        <h2>Hospitality Growth & Advisory for Hotel Owners and Hospitality Businesses</h2>
+                        <a href="industry-details.html" class="primary-btn3 two">
+                          <span data-text="Schedule a Consultation">Schedule a Consultation</span>
+                          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" />
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {# 
+        <div class="swiper-slide">
+          <div class="banner-warpper">
+            <div class="banner-bg">
+              <img src="{{ url_for('static', filename='assets/img/home2/home2-banner-img3.jpg') }}" alt="" />
+            </div>
+            <div class="banner-content-wrap">
+              <div class="container one">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="banner-content">
+                      <div class="banner-title-area">
+                        <span>AI agent & automation</span>
+                        <h2>Empowering Enterprises with Smart AI Solutions.</h2>
+                        <a href="industry-details.html" class="primary-btn3 two">
+                          <span data-text="See how we help">See how we help</span>
+                          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" />
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        #}
+      </div>
+
+    </div>
+     {#
+    <div class="thumb-content-area">
+      <div class="container one">
+        <div class="swiper home2-banner-content-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="single-slider-text">
+                <span class="slide_progress-bar"></span>
+                <span>Energy & infrastructure</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-slider-text">
+                <span class="slide_progress-bar"></span>
+                <span>Healthcare & life sciences</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-slider-text">
+                <span class="slide_progress-bar"></span>
+                <span>Helping hospitality businesses</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-slider-text">
+                <span class="slide_progress-bar"></span>
+                <span>AI agent & automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     #}
+  </div>
+  <div class="home2-banner-bottom-cta-area">
+    <div class="container one">
+      <div class="banner-cta-wrap">
+        <span>Let’s move your business forward—together.</span>
+        <a href="{{ url_for('contact') }}" class="primary-btn1 animate-btn" data-text="Contact Us">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <!-- home2 Banner Section End -->
+
+  <!-- About Page Intro Section Start -->
+  <div class="about-page-intro-section pt-140 mb-140" id="intro-section">
+    <div class="container one">
+      <div class="row gy-5 justify-content-between">
+        <div class="col-xl-6 col-lg-7 fade_anim" data-delay=".2" data-fade-from="left">
+          <div class="about-content">
+            <div class="section-title">
+              <h2>Who we are</h2>
+              <p>Hospitality Industry Relationships That Create Opportunities</p>
+            </div>
+            <div class="about-block">
+              <p>Hozpitality Consulting is a hospitality advisory and networking platform focused on helping hotel owners, hospitality businesses, and industry stakeholders identify growth opportunities, strengthen positioning, and expand hospitality relationships.</p>
+            </div>
+            <div class="about-block">
+              <p>Backed by the global reach of Hozpitality Group , we combine hospitality industry access, networking, and strategic advisory support to help hospitality businesses grow.</p>
+            </div>
+            <a href="solution-default.html" class="primary-btn3 transparent">
+              <span data-text="Explore solutions">Explore solutions</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-7 col-sm-10 fade_anim" data-delay=".2" data-fade-from="right">
+          <div class="about-img-wrap">
+            <div class="about-img">
+              <img src="{{ url_for('static', filename='assets/img/innerpages/about-page-intro-img.jpg') }}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About Page Intro Section End -->
+
+  <!-- home2 Business Challenge Section Start -->
+  <div class="home2-business-challenge-section pb-140">
+    <div class="container one">
+      <div class="row justify-content-center mb-60">
+        <div class="col-lg-5 col-md-7 col-sm-8">
+          <div class="section-title three text-center">
+            <span class="text-anim">Business that We Solve</span>
+            <h2 class="text-anim">Our Services</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-xl-4 g-lg-3 g-md-4 g-sm-3 g-4">
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".2">
+          <div class="business-challenge-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.23535 18.0001C4.23535 25.6024 10.3977 31.7648 18.0001 31.7648V4.23535C10.3977 4.23535 4.23535 10.3977 4.23535 18.0001Z" />
+                  <path d="M18 1.05859C8.65865 1.05859 1.05884 8.65841 1.05884 17.9998C1.05884 27.3411 8.65865 34.9409 18 34.9409C27.3414 34.9409 34.9412 27.3411 34.9412 17.9998C34.9412 8.65841 27.3414 1.05859 18 1.05859ZM18 32.8233C9.82632 32.8233 3.17648 26.1735 3.17648 17.9998C3.17648 9.82608 9.82632 3.17624 18 3.17624C26.1737 3.17624 32.8235 9.82608 32.8235 17.9998C32.8235 26.1735 26.1737 32.8233 18 32.8233Z" />
+                </svg>
+              </div>
+              <h3>Hospitality Advisory.</h3>
+              <span class="card-divider"></span>
+              <p>Strategic hospitality consulting designed to help hotel owners, operators, and hospitality brands improve growth, operational performance, guest experience, and long-term business value.</p>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Growth</h2>
+                <p>Strategic guidance for sustainable hospitality expansion.</p>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/home2/business-challenge-hover-card-img.png') }}" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".4">
+          <div class="business-challenge-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.4817 11.99C33.1295 11.7878 32.7305 11.6814 32.3244 11.6814C31.9183 11.6814 31.5193 11.7878 31.1671 11.99L19.8001 18.5543C19.4488 18.7584 19.157 19.051 18.954 19.4029C18.7509 19.7549 18.6437 20.1539 18.6429 20.5602V33.6889C18.6476 34.0932 18.7575 34.4894 18.9619 34.8383C19.1664 35.1872 19.4581 35.4769 19.8086 35.6787C20.159 35.8805 20.556 35.9875 20.9604 35.9892C21.3647 35.9909 21.7626 35.8872 22.1147 35.6884L33.4817 29.1234C33.8311 28.9193 34.1212 28.6275 34.3231 28.2767C34.5249 27.926 34.6316 27.5286 34.6325 27.1239V13.9953C34.6352 13.589 34.5301 13.1893 34.3279 12.8369C34.1258 12.4845 33.8338 12.1927 33.4817 11.99ZM30.5242 10.8784C30.8725 10.6728 31.1612 10.38 31.3617 10.0287C31.5623 9.67753 31.6678 9.28008 31.6678 8.87564C31.6678 8.4712 31.5623 8.07375 31.3617 7.72253C31.1612 7.37131 30.8725 7.07847 30.5242 6.87292L19.1572 0.308606C18.805 0.106402 18.406 0 17.9999 0C17.5939 0 17.1948 0.106402 16.8427 0.308606L5.47568 6.87292C5.12737 7.07847 4.83869 7.37131 4.63815 7.72253C4.4376 8.07375 4.33212 8.4712 4.33212 8.87564C4.33212 9.28008 4.4376 9.67753 4.63815 10.0287C4.83869 10.38 5.12737 10.6728 5.47568 10.8784L16.8427 17.4427C17.1948 17.6449 17.5939 17.7513 17.9999 17.7513C18.406 17.7513 18.805 17.6449 19.1572 17.4427L30.5242 10.8784ZM16.1997 18.5543L4.83275 11.99C4.48058 11.7878 4.08157 11.6814 3.67548 11.6814C3.26938 11.6814 2.87038 11.7878 2.5182 11.99C2.16613 12.1927 1.87412 12.4852 1.67195 12.8376C1.46977 13.19 1.36467 13.5897 1.36736 13.9959V27.1245C1.36828 27.5292 1.47497 27.9266 1.67684 28.2774C1.87871 28.6281 2.16875 28.92 2.5182 29.1241L13.8852 35.6877C14.2373 35.8866 14.6352 35.9903 15.0395 35.9886C15.4439 35.9869 15.8409 35.8799 16.1913 35.678C16.5417 35.4762 16.8335 35.1866 17.0379 34.8377C17.2424 34.4887 17.3523 34.0926 17.357 33.6882V20.5596C17.3562 20.1533 17.249 19.7542 17.0459 19.4023C16.8429 19.0503 16.5511 18.7584 16.1997 18.5543Z" />
+                </svg>
+              </div>
+              <h3>Brand & Franchise Exploration</h3>
+              <span class="card-divider"></span>
+              <p>Helping hospitality businesses identify the right hotel brands, franchise opportunities, and partnership models that align with market positioning, investment goals, and guest expectations.</p>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Brand Fit</h2>
+                <p>Finding the right franchise and hospitality partnerships.</p>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/home2/business-challenge-hover-card-img.png') }}" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".6">
+          <div class="business-challenge-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M4.56213 14.0422H8.04555V31.0938H4.56213V14.0422ZM10.5908 14.0422H14.0742V31.0938H10.5908V14.0422ZM16.3716 14.0422H19.855V31.0938H16.3716V14.0422Z" />
+                    <path d="M30.8959 18.4031C30.8959 22.5047 27.6595 25.8647 23.6053 26.0648V28.2341C28.8557 28.0322 33.065 23.7001 33.065 18.4029C33.065 12.9775 28.6495 8.5636 23.2223 8.5636H8.27844V10.7317H23.2224C27.4536 10.7317 30.896 14.173 30.896 18.403L30.8959 18.4031Z" />
+                    <path d="M23.2224 5.62958H8.27842V7.7977H23.2224C29.072 7.7977 33.831 12.5552 33.831 18.403C33.831 24.1225 29.2783 28.7983 23.6054 29.0006V31.1707C30.4745 30.9675 35.9999 25.3181 35.9999 18.403C35.9999 11.3597 30.268 5.62958 23.2224 5.62958ZM5.68305 7.66787C5.68305 6.10164 4.40834 4.82739 2.8415 4.82739C1.27466 4.82739 -0.00012207 6.10164 -0.00012207 7.66787C-0.00012207 9.2341 1.27466 10.5083 2.8415 10.5083C4.40834 10.5083 5.68305 9.2341 5.68305 7.66787Z" />
+                  </g>
+                </svg>
+              </div>
+              <h3>Hospitality Networking</h3>
+              <span class="card-divider"></span>
+              <p>Connecting hospitality professionals, hotel owners, investors, and industry stakeholders through meaningful business relationships, partnerships, and growth opportunities across global markets.</p>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Connections</h2>
+                <p>Expanding hospitality relationships across global markets.</p>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/home2/business-challenge-hover-card-img.png') }}" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".2">
+          <div class="business-challenge-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.23535 18.0001C4.23535 25.6024 10.3977 31.7648 18.0001 31.7648V4.23535C10.3977 4.23535 4.23535 10.3977 4.23535 18.0001Z" />
+                  <path d="M18 1.05859C8.65865 1.05859 1.05884 8.65841 1.05884 17.9998C1.05884 27.3411 8.65865 34.9409 18 34.9409C27.3414 34.9409 34.9412 27.3411 34.9412 17.9998C34.9412 8.65841 27.3414 1.05859 18 1.05859ZM18 32.8233C9.82632 32.8233 3.17648 26.1735 3.17648 17.9998C3.17648 9.82608 9.82632 3.17624 18 3.17624C26.1737 3.17624 32.8235 9.82608 32.8235 17.9998C32.8235 26.1735 26.1737 32.8233 18 32.8233Z" />
+                </svg>
+              </div>
+              <h3>Industry Partnerships.</h3>
+              <span class="card-divider"></span>
+              <p>Building strategic collaborations between hospitality businesses, suppliers, technology providers, and service partners to create stronger operational and commercial ecosystems.</p>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Collaboration</h2>
+                <p>Creating valuable partnerships within the hospitality ecosystem.</p>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/home2/business-challenge-hover-card-img.png') }}" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".4">
+          <div class="business-challenge-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.4817 11.99C33.1295 11.7878 32.7305 11.6814 32.3244 11.6814C31.9183 11.6814 31.5193 11.7878 31.1671 11.99L19.8001 18.5543C19.4488 18.7584 19.157 19.051 18.954 19.4029C18.7509 19.7549 18.6437 20.1539 18.6429 20.5602V33.6889C18.6476 34.0932 18.7575 34.4894 18.9619 34.8383C19.1664 35.1872 19.4581 35.4769 19.8086 35.6787C20.159 35.8805 20.556 35.9875 20.9604 35.9892C21.3647 35.9909 21.7626 35.8872 22.1147 35.6884L33.4817 29.1234C33.8311 28.9193 34.1212 28.6275 34.3231 28.2767C34.5249 27.926 34.6316 27.5286 34.6325 27.1239V13.9953C34.6352 13.589 34.5301 13.1893 34.3279 12.8369C34.1258 12.4845 33.8338 12.1927 33.4817 11.99ZM30.5242 10.8784C30.8725 10.6728 31.1612 10.38 31.3617 10.0287C31.5623 9.67753 31.6678 9.28008 31.6678 8.87564C31.6678 8.4712 31.5623 8.07375 31.3617 7.72253C31.1612 7.37131 30.8725 7.07847 30.5242 6.87292L19.1572 0.308606C18.805 0.106402 18.406 0 17.9999 0C17.5939 0 17.1948 0.106402 16.8427 0.308606L5.47568 6.87292C5.12737 7.07847 4.83869 7.37131 4.63815 7.72253C4.4376 8.07375 4.33212 8.4712 4.33212 8.87564C4.33212 9.28008 4.4376 9.67753 4.63815 10.0287C4.83869 10.38 5.12737 10.6728 5.47568 10.8784L16.8427 17.4427C17.1948 17.6449 17.5939 17.7513 17.9999 17.7513C18.406 17.7513 18.805 17.6449 19.1572 17.4427L30.5242 10.8784ZM16.1997 18.5543L4.83275 11.99C4.48058 11.7878 4.08157 11.6814 3.67548 11.6814C3.26938 11.6814 2.87038 11.7878 2.5182 11.99C2.16613 12.1927 1.87412 12.4852 1.67195 12.8376C1.46977 13.19 1.36467 13.5897 1.36736 13.9959V27.1245C1.36828 27.5292 1.47497 27.9266 1.67684 28.2774C1.87871 28.6281 2.16875 28.92 2.5182 29.1241L13.8852 35.6877C14.2373 35.8866 14.6352 35.9903 15.0395 35.9886C15.4439 35.9869 15.8409 35.8799 16.1913 35.678C16.5417 35.4762 16.8335 35.1866 17.0379 34.8377C17.2424 34.4887 17.3523 34.0926 17.357 33.6882V20.5596C17.3562 20.1533 17.249 19.7542 17.0459 19.4023C16.8429 19.0503 16.5511 18.7584 16.1997 18.5543Z" />
+                </svg>
+              </div>
+              <h3>Hotel Positioning</h3>
+              <span class="card-divider"></span>
+              <p>Supporting hotels in defining their market identity, competitive positioning, guest targeting, and brand differentiation to maximize visibility and revenue potential.</p>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Positioning</h2>
+                <p>Strengthening market identity and competitive differentiation.</p>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/home2/business-challenge-hover-card-img.png') }}" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".6">
+          <div class="business-challenge-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M4.56213 14.0422H8.04555V31.0938H4.56213V14.0422ZM10.5908 14.0422H14.0742V31.0938H10.5908V14.0422ZM16.3716 14.0422H19.855V31.0938H16.3716V14.0422Z" />
+                    <path d="M30.8959 18.4031C30.8959 22.5047 27.6595 25.8647 23.6053 26.0648V28.2341C28.8557 28.0322 33.065 23.7001 33.065 18.4029C33.065 12.9775 28.6495 8.5636 23.2223 8.5636H8.27844V10.7317H23.2224C27.4536 10.7317 30.896 14.173 30.896 18.403L30.8959 18.4031Z" />
+                    <path d="M23.2224 5.62958H8.27842V7.7977H23.2224C29.072 7.7977 33.831 12.5552 33.831 18.403C33.831 24.1225 29.2783 28.7983 23.6054 29.0006V31.1707C30.4745 30.9675 35.9999 25.3181 35.9999 18.403C35.9999 11.3597 30.268 5.62958 23.2224 5.62958ZM5.68305 7.66787C5.68305 6.10164 4.40834 4.82739 2.8415 4.82739C1.27466 4.82739 -0.00012207 6.10164 -0.00012207 7.66787C-0.00012207 9.2341 1.27466 10.5083 2.8415 10.5083C4.40834 10.5083 5.68305 9.2341 5.68305 7.66787Z" />
+                  </g>
+                </svg>
+              </div>
+              <h3>Hospitality Visibility</h3>
+              <span class="card-divider"></span>
+              <p>Enhancing hospitality brand exposure through industry marketing, digital presence, strategic promotion, and global hospitality network visibility initiatives.</p>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Visibility</h2>
+                <p>Improving hospitality brand reach and industry recognition.</p>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/home2/business-challenge-hover-card-img.png') }}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- home2 Business Challenge Section End -->
+
+  <!-- Solution2 Page Process Section Start -->
+  <div class="solution2-page-process-section bg-white pt-140 pb-60">
+    <div class="container one">
+      <div class="row justify-content-center mb-70">
+        <div class="col-xxl-7 col-xl-8 col-lg-9">
+          <div class="section-title text-center">
+            <h2 class="text-anim">Who We Work With.</h2>
+            <p>Supporting Hospitality Businesses Across Multiple Segments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="process-wrapper">
+        <div class="solution2-process-card">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">01.</span>
+              <h2>Independent Hotels</h2>
+            </div>
+            <div class="process-content">
+              <p>Helping independent hotels strengthen brand identity, improve operational performance, increase direct bookings, and compete effectively in evolving hospitality markets.</p>
+              <ul>
+                <li>Market Positioning</li>
+                <li>Revenue Growth Strategy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="process-img">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-img1.png') }}" alt="" />
+          </div>
+        </div>
+
+        <div class="solution2-process-card">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">02.</span>
+              <h2>Boutique Properties</h2>
+            </div>
+            <div class="process-content">
+              <p>Supporting boutique hospitality brands with personalized guest experience strategies, brand storytelling, and lifestyle-focused business growth solutions.</p>
+              <ul>
+                <li>Brand Development</li>
+                <li>Guest Experience Strategy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="process-img">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-img2.png') }}" alt="" />
+          </div>
+          <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-card-gradient-vector.png') }}" alt="" class="gradient-vector" />
+        </div>
+
+        <div class="solution2-process-card">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">03.</span>
+              <h2>Hotel Investors</h2>
+            </div>
+            <div class="process-content">
+              <p>Assisting hotel investors with hospitality market insights, investment evaluation, partnership opportunities, and long-term asset growth planning.</p>
+              <ul>
+                <li>Investment Advisory</li>
+                <li>Hospitality Market Analysis</li>
+              </ul>
+            </div>
+          </div>
+          <div class="process-img">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-img3.png') }}" alt="" />
+          </div>
+        </div>
+
+        <div class="solution2-process-card">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">04.</span>
+              <h2>Hospitality Entrepreneurs</h2>
+            </div>
+            <div class="process-content">
+              <p>Helping hospitality entrepreneurs launch, scale, and position new concepts through strategic planning, operational guidance, and industry networking.</p>
+              <ul>
+                <li>Business Launch Strategy</li>
+                <li>Operational Planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="process-img">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-img2.png') }}" alt="" />
+          </div>
+          <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-card-gradient-vector.png') }}" alt="" class="gradient-vector" />
+        </div>
+
+        <div class="solution2-process-card">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">05.</span>
+              <h2>Restaurant & Lifestyle Concepts</h2>
+            </div>
+            <div class="process-content">
+              <p>Supporting restaurant and lifestyle hospitality concepts with branding, visibility, customer engagement, and experiential growth strategies.</p>
+              <ul>
+                <li>Concept Positioning</li>
+                <li>Customer Experience Design</li>
+              </ul>
+            </div>
+          </div>
+          <div class="process-img">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-img3.png') }}" alt="" />
+          </div>
+        </div>
+
+        <div class="solution2-process-card">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">06.</span>
+              <h2>Mixed-Use Hospitality Projects</h2>
+            </div>
+            <div class="process-content">
+              <p>Providing advisory support for integrated hospitality developments that combine hotels, residences, retail, dining, and lifestyle experiences.</p>
+              <ul>
+                <li>Project Strategy</li>
+                <li>Hospitality Integration Planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="process-img">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-img3.png') }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Solution2 Page Process Section End -->
+
+  <!-- home1 Service Section Start -->
+  <div class="home1-service-section mb-140" id="service-section">
+    <div class="container one">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-11">
+          <div class="section-title white text-center">
+            <h2 class="text-anim">Why Hospitality Businesses Connect With Us</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="service-wrapper">
+      <div class="container one">
+        <div class="row g-xxl-4 g-xl-3 g-4 mb-70">
+          <div class="col-xl-4 col-lg-4 col-md-6 fade_anim" data-delay=".2">
+            <div class="service-card">
+              <div class="icon-and-title-area">
+                <div class="icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M5.06911 15.6025H8.93958V34.5487H5.06911V15.6025ZM11.7677 15.6025H15.6381V34.5487H11.7677V15.6025ZM18.1907 15.6025H22.0612V34.5487H18.1907V15.6025Z" />
+                      <path d="M34.3288 20.4479C34.3288 25.0053 30.7328 28.7386 26.2282 28.9609V31.3713C32.0619 31.147 36.7389 26.3335 36.7389 20.4477C36.7389 14.4195 31.8328 9.51514 25.8026 9.51514H9.1983V11.9242H25.8027C30.5041 11.9242 34.3289 15.7478 34.3289 20.4478L34.3288 20.4479Z" />
+                      <path d="M25.8027 6.25533H9.19831V8.66435H25.8027C32.3023 8.66435 37.59 13.9505 37.59 20.448C37.59 26.8031 32.5315 31.9984 26.2283 32.2232V34.6343C33.8606 34.4086 40 28.1315 40 20.448C40 12.6221 33.6312 6.25533 25.8027 6.25533ZM6.31456 8.5201C6.31456 6.77984 4.89822 5.36401 3.15728 5.36401C1.41635 5.36401 -7.62939e-05 6.77984 -7.62939e-05 8.5201C-7.62939e-05 10.2604 1.41635 11.6762 3.15728 11.6762C4.89822 11.6762 6.31456 10.2604 6.31456 8.5201Z" />
+                    </g>
+                  </svg>
+                </div>
+                <h3><a href="solution-details.html">Hospitality-focused network.</a></h3>
+              </div>
+              <div class="service-content">
+                <div class="service-list-area">
+                  <span>What we deliver</span>
+                  <ul class="service-list">
+                    <li>Hotel industry connections</li>
+                    <li>Hospitality growth support</li>
+                    <li>Strategic networking access</li>
+                  </ul>
+                </div>
+                <p class="service-desc">Connecting hospitality businesses with valuable industry relationships and growth opportunities.</p>
+              </div>
+              <a href="solution-details.html" class="primary-btn1 animate-btn" data-text="Read more">Read more</a>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 fade_anim" data-delay=".4">
+            <div class="service-card">
+              <div class="icon-and-title-area">
+                <div class="icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.05 14.1568C34.7076 13.9603 34.3197 13.8568 33.925 13.8568C33.5302 13.8568 33.1423 13.9603 32.8 14.1568L21.75 20.5381C21.4084 20.7365 21.1248 21.0209 20.9274 21.363C20.73 21.7052 20.6257 22.0931 20.625 22.4881V35.2506C20.6295 35.6437 20.7364 36.0288 20.9351 36.368C21.1339 36.7072 21.4175 36.9887 21.7582 37.1849C22.0988 37.3811 22.4847 37.4852 22.8778 37.4868C23.2709 37.4885 23.6577 37.3877 24 37.1943L35.05 30.8125C35.3897 30.6141 35.6716 30.3303 35.8679 29.9894C36.0641 29.6484 36.1678 29.2621 36.1687 28.8687V16.1062C36.1713 15.7113 36.0692 15.3227 35.8726 14.9802C35.6761 14.6376 35.3922 14.3539 35.05 14.1568ZM32.175 13.0762C32.5136 12.8764 32.7942 12.5917 32.9892 12.2503C33.1841 11.9089 33.2866 11.5225 33.2866 11.1293C33.2866 10.7362 33.1841 10.3498 32.9892 10.0084C32.7942 9.66697 32.5136 9.3823 32.175 9.18247L21.125 2.80122C20.7826 2.60466 20.3947 2.50122 20 2.50122C19.6052 2.50122 19.2173 2.60466 18.875 2.80122L7.82498 9.18247C7.48638 9.3823 7.20575 9.66697 7.0108 10.0084C6.81585 10.3498 6.71331 10.7362 6.71331 11.1293C6.71331 11.5225 6.81585 11.9089 7.0108 12.2503C7.20575 12.5917 7.48638 12.8764 7.82498 13.0762L18.875 19.4575C19.2173 19.654 19.6052 19.7575 20 19.7575C20.3947 19.7575 20.7826 19.654 21.125 19.4575L32.175 13.0762ZM18.25 20.5381L7.19998 14.1568C6.85762 13.9603 6.46974 13.8568 6.07498 13.8568C5.68021 13.8568 5.29233 13.9603 4.94998 14.1568C4.60772 14.3539 4.32385 14.6382 4.12732 14.9808C3.93078 15.3234 3.82861 15.7119 3.83123 16.1068V28.8693C3.83212 29.2627 3.93583 29.6491 4.13207 29.99C4.32831 30.331 4.61027 30.6147 4.94998 30.8131L16 37.1937C16.3423 37.387 16.729 37.4879 17.1221 37.4862C17.5152 37.4845 17.9011 37.3805 18.2418 37.1843C18.5824 36.9881 18.8661 36.7066 19.0648 36.3674C19.2635 36.0282 19.3704 35.6431 19.375 35.25V22.4875C19.3742 22.0925 19.2699 21.7046 19.0726 21.3624C18.8752 21.0203 18.5916 20.7365 18.25 20.5381Z" />
+                  </svg>
+                </div>
+                <h3><a href="solution-details.html">Global hospitality relationships.</a></h3>
+              </div>
+              <div class="service-content">
+                <div class="service-list-area">
+                  <span>What we deliver</span>
+                  <ul class="service-list">
+                    <li>International partnerships</li>
+                    <li>Investor introductions</li>
+                    <li>Hospitality collaboration</li>
+                  </ul>
+                </div>
+                <p class="service-desc">Expanding global hospitality relationships across brands, investors, and operators.</p>
+              </div>
+              <a href="solution-details.html" class="primary-btn1 animate-btn" data-text="Read more">Read more</a>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 fade_anim" data-delay=".6">
+            <div class="service-card">
+              <div class="icon-and-title-area">
+                <div class="icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.70587 19.9999C4.70587 28.447 11.5529 35.294 20 35.294V4.70581C11.5529 4.70581 4.70587 11.5529 4.70587 19.9999Z" />
+                    <path d="M20 1.17651C9.62069 1.17651 1.17645 9.62075 1.17645 20C1.17645 30.3793 9.62069 38.8236 20 38.8236C30.3793 38.8236 38.8235 30.3793 38.8235 20C38.8235 9.62075 30.3793 1.17651 20 1.17651ZM20 36.4706C10.9181 36.4706 3.52939 29.0819 3.52939 20C3.52939 10.9182 10.9181 3.52945 20 3.52945C29.0819 3.52945 36.4706 10.9182 36.4706 20C36.4706 29.0819 29.0819 36.4706 20 36.4706Z" />
+                  </svg>
+                </div>
+                <h3><a href="solution-details.html">Growing U.S. presence.</a></h3>
+              </div>
+              <div class="service-content">
+                <div class="service-list-area">
+                  <span>What we deliver</span>
+                  <ul class="service-list">
+                    <li>U.S. market expansion</li>
+                    <li>Growth planning</li>
+                    <li>Market positioning</li>
+                  </ul>
+                </div>
+                <p class="service-desc">Helping hospitality businesses strengthen visibility and presence in the U.S. market.</p>
+              </div>
+              <a href="solution-details.html" class="primary-btn1 animate-btn" data-text="Read more">Read more</a>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 fade_anim" data-delay=".8">
+            <div class="service-card">
+              <div class="icon-and-title-area">
+                <div class="icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.1421 5.85775C31.8868 3.60244 29.1876 1.9526 26.2416 0.98877C27.0632 1.9626 27.8229 3.13932 28.5038 4.50674C30.5743 8.66471 31.7146 14.1669 31.7146 19.9999C31.7146 25.8328 30.5744 31.335 28.5038 35.493C27.8229 36.8604 27.0632 38.0371 26.2416 39.011C29.1876 38.0471 31.8868 36.3973 34.1421 34.142C37.9196 30.3645 40 25.3421 40 19.9999C40 14.6577 37.9196 9.63525 34.1421 5.85775ZM8.28547 19.9999C8.28547 14.1669 9.4257 8.66471 11.4962 4.50674C12.1772 3.13932 12.9369 1.9626 13.7584 0.98877C10.8125 1.9526 8.11328 3.60244 5.85797 5.85775C2.08039 9.63525 0 14.6577 0 19.9999C0 25.3421 2.08039 30.3645 5.85789 34.142C8.1132 36.3973 10.8124 38.0471 13.7584 39.011C12.9368 38.0371 12.1771 36.8604 11.4962 35.493C9.4257 31.335 8.28547 25.8328 8.28547 19.9999Z" />
+                    <path d="M16.6551 38.6149C17.3637 39.2168 18.0911 39.6231 18.8282 39.8327V0.167236C18.0911 0.376846 17.3636 0.783096 16.6551 1.38505C15.5211 2.34817 14.4914 3.74997 13.5943 5.55161C11.6822 9.3913 10.6293 14.5225 10.6293 20C10.6293 25.4774 11.6823 30.6086 13.5943 34.4483C14.4914 36.25 15.5211 37.6518 16.6551 38.6149ZM29.3708 20C29.3708 14.5225 28.3178 9.3913 26.4058 5.55161C25.5087 3.74997 24.479 2.34817 23.3451 1.38505C22.6365 0.783096 21.909 0.376846 21.1719 0.167236V39.8327C21.909 39.6231 22.6365 39.2168 23.3451 38.6149C24.4789 37.6518 25.5086 36.25 26.4058 34.4483C28.3179 30.6086 29.3708 25.4774 29.3708 20Z" />
+                  </svg>
+                </div>
+                <h3><a href="solution-details.html">Industry visibility initiatives.</a></h3>
+              </div>
+
+              <div class="service-content">
+                <div class="service-list-area">
+                  <span>What we deliver</span>
+                  <ul class="service-list">
+                    <li>Brand visibility</li>
+                    <li>Industry exposure</li>
+                    <li>Digital promotion</li>
+                  </ul>
+                </div>
+                <p class="service-desc">Increasing hospitality brand recognition through targeted visibility initiatives.</p>
+              </div>
+
+              <a href="solution-details.html" class="primary-btn1 animate-btn" data-text="Read more">Read more</a>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 fade_anim" data-delay=".8">
+            <div class="service-card">
+              <div class="icon-and-title-area">
+                <div class="icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.1421 5.85775C31.8868 3.60244 29.1876 1.9526 26.2416 0.98877C27.0632 1.9626 27.8229 3.13932 28.5038 4.50674C30.5743 8.66471 31.7146 14.1669 31.7146 19.9999C31.7146 25.8328 30.5744 31.335 28.5038 35.493C27.8229 36.8604 27.0632 38.0371 26.2416 39.011C29.1876 38.0471 31.8868 36.3973 34.1421 34.142C37.9196 30.3645 40 25.3421 40 19.9999C40 14.6577 37.9196 9.63525 34.1421 5.85775ZM8.28547 19.9999C8.28547 14.1669 9.4257 8.66471 11.4962 4.50674C12.1772 3.13932 12.9369 1.9626 13.7584 0.98877C10.8125 1.9526 8.11328 3.60244 5.85797 5.85775C2.08039 9.63525 0 14.6577 0 19.9999C0 25.3421 2.08039 30.3645 5.85789 34.142C8.1132 36.3973 10.8124 38.0471 13.7584 39.011C12.9368 38.0371 12.1771 36.8604 11.4962 35.493C9.4257 31.335 8.28547 25.8328 8.28547 19.9999Z" />
+                    <path d="M16.6551 38.6149C17.3637 39.2168 18.0911 39.6231 18.8282 39.8327V0.167236C18.0911 0.376846 17.3636 0.783096 16.6551 1.38505C15.5211 2.34817 14.4914 3.74997 13.5943 5.55161C11.6822 9.3913 10.6293 14.5225 10.6293 20C10.6293 25.4774 11.6823 30.6086 13.5943 34.4483C14.4914 36.25 15.5211 37.6518 16.6551 38.6149ZM29.3708 20C29.3708 14.5225 28.3178 9.3913 26.4058 5.55161C25.5087 3.74997 24.479 2.34817 23.3451 1.38505C22.6365 0.783096 21.909 0.376846 21.1719 0.167236V39.8327C21.909 39.6231 22.6365 39.2168 23.3451 38.6149C24.4789 37.6518 25.5086 36.25 26.4058 34.4483C28.3179 30.6086 29.3708 25.4774 29.3708 20Z" />
+                  </svg>
+                </div>
+                <h3><a href="solution-details.html">Hospitality community engagement.</a></h3>
+              </div>
+
+              <div class="service-content">
+                <div class="service-list-area">
+                  <span>What we deliver</span>
+                  <ul class="service-list">
+                    <li>Community networking</li>
+                    <li>Industry engagement</li>
+                    <li>Business collaboration</li>
+                  </ul>
+                </div>
+                <p class="service-desc">Building stronger hospitality communities through engagement and collaboration.</p>
+              </div>
+
+              <a href="solution-details.html" class="primary-btn1 animate-btn" data-text="Read more">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="explore-btn-area d-flex justify-content-center">
+          <a href="solution-default.html" class="explore-btn">
+            <span>Explore all services</span>
+            <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M8 4.5L2 9L2 0L8 4.5Z" />
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- home1 Service Section End -->
+
+
+  <!-- home2 Blog Section Start -->
+  <div class="home2-blog-section mb-140">
+    <div class="container one">
+      <div class="row mb-60">
+        <div class="col-xl-10 col-lg-10 col-md-9">
+          <div class="section-title three">
+            <span class="text-anim">Latest Article</span>
+            <h2 class="text-anim">Stay informed with expert <strong>insights, industry trends, and practical guidance.</strong></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-xl-4 g-lg-3 g-4">
+        <div class="col-lg-4 col-md-6 fade_anim" data-delay=".2">
+          <div class="blog-card two">
+            <div class="blog-content">
+              <a href="blog1.html" class="category">
+                <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 0H6L0 13H7L13 0Z" />
+                </svg>operational efficiency
+              </a>
+              <h2><a href="blog-details.html">Workflow & performance optimization.</a></h2>
+              <a href="blog-details.html" class="blog-img"><img src="{{ url_for('static', filename='assets/img/home2/blog-img1.jpg') }}" alt="" /></a>
+              <p>Improving day-to-day workflows to drive stronger performance and measurable efficiency gains.</p>
+              <a href="blog-details.html" class="read-more-btn">
+                Read more<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M8 4.5L2 9L2 0L8 4.5Z"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade_anim" data-delay=".4">
+          <div class="blog-card two">
+            <div class="blog-content">
+              <a href="blog1.html" class="category">
+                <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 0H6L0 13H7L13 0Z" />
+                </svg>scaling a business
+              </a>
+              <h2><a href="blog-details.html">Avoid to common mistakes during growth.</a></h2>
+              <a href="blog-details.html" class="blog-img"><img src="{{ url_for('static', filename='assets/img/home2/blog-img2.jpg') }}" alt="" /></a>
+              <p>Supporting sustainable growth by identifying and preventing common scaling mistakes.</p>
+              <a href="blog-details.html" class="read-more-btn">
+                Read more<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M8 4.5L2 9L2 0L8 4.5Z"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade_anim" data-delay=".6">
+          <div class="blog-card two">
+            <div class="blog-content">
+              <a href="blog1.html" class="category">
+                <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 0H6L0 13H7L13 0Z" />
+                </svg>operational efficiency
+              </a>
+              <h2><a href="blog-details.html">Gap between strategy & execution.</a></h2>
+              <a href="blog-details.html" class="blog-img"><img src="{{ url_for('static', filename='assets/img/home2/blog-img3.jpg') }}" alt="" /></a>
+              <p>A strategy only creates value when it is executed with clarity, accountability, and operational discipline.</p>
+              <a href="blog-details.html" class="read-more-btn">
+                Read more<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M8 4.5L2 9L2 0L8 4.5Z"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="explore-btn-area d-flex justify-content-center">
+        <a href="blog1.html" class="explore-btn">
+          <span>View all article</span>
+          <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M8 4.5L2 9L2 0L8 4.5Z" />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- home2 Blog Section End -->
+
+{% endblock %}

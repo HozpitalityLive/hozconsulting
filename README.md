@@ -1,1 +1,1 @@
-# hozconsulting
+# Hoz-consulting
