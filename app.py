@@ -8,6 +8,16 @@ from flask_admin.contrib.sqla import ModelView
 from flask_admin.form import ImageUploadField
 from datetime import datetime
 
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    flash
+)
+
+from flask_mail import Mail, Message
+
 from bs4 import BeautifulSoup
 from markupsafe import Markup
 from slugify import slugify
@@ -17,6 +27,18 @@ app = Flask(__name__)
 
 # SECRET KEY
 app.config['SECRET_KEY'] = 'hozflask-secret-key'
+
+# EMAIL CONFIG
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+
+app.config['MAIL_USERNAME'] = 'chandanwebd1@gmail.com'
+
+# Gmail App Password
+app.config['MAIL_PASSWORD'] = 'vzgocuzhqeacvods'
+
+mail = Mail(app)
 
 # DATABASE CONFIG
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blogs.db'
@@ -164,9 +186,68 @@ def home():
     return render_template('pages/home.html')
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('pages/contact.html')
+
+    if request.method == 'POST':
+
+        full_name = request.form.get('full_name')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        company = request.form.get('company')
+        message = request.form.get('message')
+
+        interests = request.form.getlist('interests')
+
+        try:
+
+            msg = Message(
+                subject=f"New Hozpitality Consulting Enquiry - {full_name}",
+                sender=app.config['MAIL_USERNAME'],
+                recipients=['chandanwebd1@gmail.com']
+            )
+
+            msg.html = f"""
+            <h2>New Contact Enquiry</h2>
+
+            <p><strong>Name:</strong> {full_name}</p>
+            <p><strong>Email:</strong> {email}</p>
+            <p><strong>Phone:</strong> {phone}</p>
+            <p><strong>Company:</strong> {company}</p>
+
+            <p>
+                <strong>Interested In:</strong>
+                {', '.join(interests)}
+            </p>
+
+            <p>
+                <strong>Message:</strong>
+            </p>
+
+            <p>{message}</p>
+            """
+
+            mail.send(msg)
+
+            flash(
+                'Thank you! Your enquiry has been submitted successfully.',
+                'success'
+            )
+
+        except Exception as e:
+
+            print(e)
+
+            flash(
+                'Something went wrong. Please try again.',
+                'danger'
+            )
+
+        return redirect('/contact')
+
+    return render_template(
+        'pages/contact.html'
+    )
 
 
 @app.route('/about')

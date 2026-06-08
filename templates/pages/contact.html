@@ -1,245 +1,427 @@
-{% extends 'layouts/app.html' %}
-
-{% block title %}
-  About Hozpitality Consulting | Hospitality Advisory Network
-{% endblock %}
-
-{% block meta_description %}
-  Learn about Hozpitality Consulting, a hospitality advisory and networking platform supporting hotel owners, hospitality businesses, and hospitality growth initiatives.
-{% endblock %}
-
-{% block content %}
-  <!-- Breadcrumb Section Start -->
-  <div class="breadcrumb-section mb-140" style="background-image:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('{{ url_for('static', filename='assets/img/innerpages/breadcrumb-bg6.jpg') }}');">
-    <div class="container one">
-      <div class="row">
-        <div class="col-lg-10">
-          <div class="banner-content">
-            <h1>Contact Us</h1>
-            <ul class="breadcrumb-list">
-              <li>Home</li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <path d="M4.88174 0.633502L12.9342 6.57774C12.9975 6.62911 13.0485 6.69395 13.0835 6.76753C13.1185 6.84111 13.1367 6.92158 13.1367 7.00308C13.1367 7.08458 13.1185 7.16505 13.0835 7.23863C13.0485 7.31221 12.9975 7.37705 12.9342 7.42842L4.88174 13.3727C4.39775 13.5513 4.11824 13.4153 4.04321 12.9648L11.5446 7.42842C11.6078 7.37705 11.6588 7.31221 11.6939 7.23863C11.7289 7.16505 11.7471 7.08458 11.7471 7.00308C11.7471 6.92158 11.7289 6.84111 11.6939 6.76753C11.6588 6.69395 11.6078 6.62911 11.5446 6.57774L4.04691 1.04405C4.0518 0.949341 4.0819 0.857657 4.13409 0.778471C4.18628 0.699286 4.25866 0.635471 4.34376 0.59362C4.42887 0.551769 4.5236 0.5334 4.61818 0.540411C4.71275 0.547423 4.80374 0.57956 4.88174 0.633502ZM1.71148 13.3721L3.68127 11.9186L4.8754 11.0372L9.765 7.42842C9.83163 7.37931 9.8858 7.31524 9.92313 7.24136C9.96045 7.16748 9.9799 7.08586 9.9799 7.00308C9.9799 6.9203 9.96045 6.83869 9.92313 6.76481C9.8858 6.69092 9.83163 6.62685 9.765 6.57774L4.87487 2.96893L3.68127 2.08759L1.71201 0.634559L1.71095 0.633502C1.61585 0.567501 1.50184 0.534281 1.38617 0.538871C1.2705 0.543461 1.15948 0.585612 1.0699 0.658941C0.980332 0.732271 0.917089 0.832787 0.889751 0.945272C0.862412 1.05776 0.872466 1.17609 0.918389 1.28235L3.58828 7.00308L0.918919 12.7238C0.886177 12.7938 0.869221 12.8701 0.86925 12.9473C0.870887 13.0444 0.899018 13.1392 0.950607 13.2215C1.0022 13.3038 1.07528 13.3704 1.16197 13.4142C1.24867 13.458 1.34567 13.4773 1.44252 13.4699C1.53936 13.4626 1.63236 13.4285 1.71148 13.3721Z" />
-                  </g>
-                </svg>Contact Us
-              </li>
-            </ul>
-          </div>
+{% extends 'layouts/app.html' %} {% block title %} About Hozpitality Consulting
+| Hospitality Advisory Network {% endblock %} {% block meta_description %} Learn
+about Hozpitality Consulting, a hospitality advisory and networking platform
+supporting hotel owners, hospitality businesses, and hospitality growth
+initiatives. {% endblock %} {% block content %}
+<!-- Breadcrumb Section Start -->
+<div
+  class="breadcrumb-section mb-140"
+  style="background-image:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('{{ url_for('static', filename='assets/img/innerpages/breadcrumb-bg6.jpg') }}');"
+>
+  <div class="container one">
+    <div class="row">
+      <div class="col-lg-10">
+        <div class="banner-content">
+          <h1>Contact Us</h1>
+          <ul class="breadcrumb-list">
+            <li>Home</li>
+            <li>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M4.88174 0.633502L12.9342 6.57774C12.9975 6.62911 13.0485 6.69395 13.0835 6.76753C13.1185 6.84111 13.1367 6.92158 13.1367 7.00308C13.1367 7.08458 13.1185 7.16505 13.0835 7.23863C13.0485 7.31221 12.9975 7.37705 12.9342 7.42842L4.88174 13.3727C4.39775 13.5513 4.11824 13.4153 4.04321 12.9648L11.5446 7.42842C11.6078 7.37705 11.6588 7.31221 11.6939 7.23863C11.7289 7.16505 11.7471 7.08458 11.7471 7.00308C11.7471 6.92158 11.7289 6.84111 11.6939 6.76753C11.6588 6.69395 11.6078 6.62911 11.5446 6.57774L4.04691 1.04405C4.0518 0.949341 4.0819 0.857657 4.13409 0.778471C4.18628 0.699286 4.25866 0.635471 4.34376 0.59362C4.42887 0.551769 4.5236 0.5334 4.61818 0.540411C4.71275 0.547423 4.80374 0.57956 4.88174 0.633502ZM1.71148 13.3721L3.68127 11.9186L4.8754 11.0372L9.765 7.42842C9.83163 7.37931 9.8858 7.31524 9.92313 7.24136C9.96045 7.16748 9.9799 7.08586 9.9799 7.00308C9.9799 6.9203 9.96045 6.83869 9.92313 6.76481C9.8858 6.69092 9.83163 6.62685 9.765 6.57774L4.87487 2.96893L3.68127 2.08759L1.71201 0.634559L1.71095 0.633502C1.61585 0.567501 1.50184 0.534281 1.38617 0.538871C1.2705 0.543461 1.15948 0.585612 1.0699 0.658941C0.980332 0.732271 0.917089 0.832787 0.889751 0.945272C0.862412 1.05776 0.872466 1.17609 0.918389 1.28235L3.58828 7.00308L0.918919 12.7238C0.886177 12.7938 0.869221 12.8701 0.86925 12.9473C0.870887 13.0444 0.899018 13.1392 0.950607 13.2215C1.0022 13.3038 1.07528 13.3704 1.16197 13.4142C1.24867 13.458 1.34567 13.4773 1.44252 13.4699C1.53936 13.4626 1.63236 13.4285 1.71148 13.3721Z"
+                  />
+                </g></svg
+              >Contact Us
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <!-- Breadcrumb Section End -->
+</div>
+<!-- Breadcrumb Section End -->
 
-  <!-- Contact Page Start -->
-  <div class="contact-page mb-150">
-    <div class="container one">
-      <div class="row gy-5 justify-content-between">
-        <div class="col-lg-4 col-md-8">
-          <div class="contact-page-sidebar">
-            <p>Partner with Hozpitality Consulting for expert advice on hotel development, operations, branding, franchise partnerships, revenue management, and hospitality business growth. We help hospitality businesses turn opportunities into sustainable success.</p>
-            <div class="contact-info">
-              <h2>Contact info-</h2>
-              <ul class="contact-list">
-                <li class="single-contact">
-                  <div class="icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7146 17.1769L17.4395 18.4519L17.4093 18.4707C16.7391 18.8906 15.9075 19.1012 14.9625 19.1012C14.0665 19.1012 13.0692 18.9121 12.0099 18.534C9.86566 17.7679 7.61375 16.2754 5.66879 14.3304C3.72402 12.3855 2.23117 10.1336 1.46554 7.98943C0.6882 5.81287 0.7107 3.89529 1.52871 2.58978L1.54738 2.55978L2.82258 1.28474C3.07133 1.03591 3.40301 0.898804 3.75679 0.898804C4.11043 0.898804 4.44226 1.03591 4.69101 1.28474L7.75215 4.34568C8.0009 4.59451 8.13781 4.92654 8.13781 5.28009C8.13781 5.63392 8.0009 5.96564 7.75215 6.21443L6.53621 7.4304C6.33066 7.84837 6.37551 8.48044 6.66418 9.21716C6.98375 10.0332 7.57828 10.9011 8.33824 11.6609C9.0984 12.421 9.96637 13.0156 10.7821 13.3351C11.5191 13.6238 12.1512 13.6687 12.5691 13.4633L13.7849 12.2472C14.0336 11.9984 14.3659 11.8617 14.7193 11.8617C15.0731 11.8617 15.4048 11.9984 15.6535 12.2472L18.7146 15.3081C19.2297 15.8234 19.2297 16.6617 18.7146 17.1769Z" />
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <span>Contact Number</span>
-                    <a href="#">424-436-1491</a>
-                  </div>
-                </li>
-                <li class="single-contact">
-                  <div class="icon">
-                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.9713 2.08497L14.1513 15.1875C14.0913 15.4725 13.9038 15.7125 13.6413 15.84C13.3788 15.9675 13.0788 15.9675 12.8088 15.84L10.7088 14.82C10.7088 14.82 8.02381 16.7625 7.47631 17.0175C7.37131 17.07 7.32631 17.0625 7.25131 17.0625C7.1033 17.0629 6.96112 17.0048 6.85576 16.9008C6.7504 16.7969 6.69039 16.6555 6.68881 16.5075V12.525C6.68131 12.4425 6.68881 12.36 6.73381 12.2775C6.77881 12.195 6.74131 12.2625 6.74881 12.255C6.77131 12.2175 6.79381 12.18 6.82381 12.1425L13.7313 4.58247L5.14381 11.6475C5.05143 11.7421 4.92887 11.8014 4.79736 11.8151C4.66585 11.8288 4.5337 11.796 4.42381 11.7225L1.53631 10.4175C1.21381 10.26 1.01131 9.94497 0.996311 9.58497C0.988811 9.23247 1.17631 8.90247 1.49131 8.72997L15.5913 1.05747C15.9213 0.877475 16.3113 0.907475 16.6188 1.13247C16.9188 1.35747 17.0538 1.72497 16.9788 2.08497H16.9713Z" />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <span>Email Address</span>
-                    <a href="#">info@hozconsulting.com</a>
-                  </div>
-                </li>
-                <li class="single-contact">
-                  <div class="icon">
-                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.00299 16.0713C9.41991 16.0713 14.6818 8.81504 14.6818 5.67873C14.6818 2.54246 12.1393 0 9.00299 0C5.86668 0 3.32422 2.54246 3.32422 5.67877C3.32422 8.81504 8.56031 16.0713 9.00299 16.0713ZM7.14422 5.5297C7.14422 4.50315 7.97639 3.67094 9.00299 3.67094C10.0296 3.67094 10.8618 4.50311 10.8618 5.5297C10.8618 6.5563 10.0296 7.38847 9.00299 7.38847C7.97639 7.38847 7.14422 6.5563 7.14422 5.5297Z" />
-                      <path d="M2.94922 16.5541C2.94922 17.3527 5.65865 18.0001 9.00085 18.0001C12.343 18.0001 15.0524 17.3527 15.0524 16.5541C15.0524 15.9199 13.3435 15.3816 10.9666 15.1865C10.8517 15.3449 10.7353 15.5022 10.6174 15.6584C9.53659 17.0865 9.29934 17.159 9.0018 17.159C8.69756 17.159 8.43622 17.058 7.37509 15.659C7.25707 15.5029 7.14055 15.3457 7.02556 15.1873C4.65364 15.383 2.94922 15.9208 2.94922 16.5541Z" />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <span>Office Address</span>
-                    <a href="#">Suite 34, 11th Floor 11845 W Olympic Blvd Los Angeles, CA 90064</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            {#
-            <ul class="social-list">
-              <li>
-                <a href="https://www.facebook.com/">
-                  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.19709 15V8.62433H11.5664L11.9186 6.12805H9.19709V4.53802C9.19709 3.81769 9.41817 3.3245 10.557 3.3245H12V1.09892C11.2979 1.03062 10.5922 0.997637 9.88603 1.00013C7.79177 1.00013 6.3539 2.16076 6.3539 4.29143V6.12338H4V8.61966H6.35904V15H9.19709Z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com/">
-                  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.025 2H14.1722L9.48225 7.08303L15 14H10.6801L7.2965 9.80414L3.42462 14H1.2765L6.29287 8.56276L1 2H5.43013L8.48825 5.83421L12.025 2ZM11.2725 12.7818H12.4625L4.78262 3.15448H3.50688L11.2725 12.7818Z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/">
-                  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.32195 4.79697C4.12755 4.79697 4.78061 4.1439 4.78061 3.33831C4.78061 2.53271 4.12755 1.87964 3.32195 1.87964C2.51635 1.87964 1.86328 2.53271 1.86328 3.33831C1.86328 4.1439 2.51635 4.79697 3.32195 4.79697Z"></path>
-                    <path d="M6.15717 5.90312V13.9958H8.66983V9.99379C8.66983 8.93779 8.8685 7.91512 10.1778 7.91512C11.4692 7.91512 11.4852 9.12246 11.4852 10.0605V13.9965H13.9992V9.55846C13.9992 7.37846 13.5298 5.70312 10.9818 5.70312C9.7585 5.70312 8.9385 6.37446 8.60317 7.00979H8.56917V5.90312H6.15717ZM2.0625 5.90312H4.57917V13.9958H2.0625V5.90312Z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://youtube.com/">
-                  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.04507 3H8.12295C8.84224 3.00267 12.4868 3.02936 13.4695 3.29807C13.7666 3.38008 14.0373 3.53993 14.2546 3.76164C14.4719 3.98336 14.6281 4.25917 14.7077 4.56153C14.7961 4.89964 14.8582 5.34718 14.9002 5.80897L14.909 5.9015L14.9282 6.13284L14.9352 6.22538C14.9921 7.03862 14.9991 7.80025 15 7.96663V8.03337C14.9991 8.20598 14.9913 9.01922 14.9282 9.86627L14.9212 9.95969L14.9134 10.0522C14.8696 10.5612 14.8049 11.0666 14.7077 11.4385C14.6281 11.7408 14.4719 12.0166 14.2546 12.2384C14.0373 12.4601 13.7666 12.6199 13.4695 12.7019C12.4545 12.9795 8.59635 12.9991 8.06169 13H7.93743C7.66704 13 6.54872 12.9947 5.37615 12.9537L5.22739 12.9484L5.15126 12.9448L5.00163 12.9386L4.85199 12.9324C3.88068 12.8888 2.95575 12.8185 2.5296 12.701C2.23263 12.6191 1.96199 12.4594 1.74472 12.2378C1.52744 12.0163 1.37113 11.7407 1.29139 11.4385C1.19426 11.0674 1.12951 10.5612 1.08576 10.0522L1.07875 9.9588L1.07175 9.86627C1.02832 9.26338 1.00439 8.65921 1 8.05472L1 7.94528C1.00175 7.75398 1.00875 7.09289 1.056 6.36329L1.06213 6.27164L1.06475 6.22538L1.07175 6.13284L1.09101 5.9015L1.09976 5.80897C1.14176 5.34718 1.20389 4.89875 1.29227 4.56153C1.37187 4.25917 1.52812 3.98336 1.74541 3.76164C1.96269 3.53993 2.2334 3.38008 2.53047 3.29807C2.95662 3.1824 3.88156 3.11122 4.85287 3.06673L5.00163 3.0605L5.15213 3.05517L5.22739 3.0525L5.37702 3.04627C6.20982 3.01904 7.04296 3.00392 7.87618 3.00089L8.04507 3ZM6.60035 5.85613V10.143L10.238 8.00044L6.60035 5.85613Z"></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            #}
-          </div>
-        </div>
-        <div class="col-xl-7 col-lg-8">
-          <div class="contact-form">
-            <form method="POST" action="/contact">
-              <div class="contact-form-top mb-70">
-                <h3>I’m Interested with in...</h3>
-                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" name="interests" value="Hotel Development" />
-                  <label class="btn" for="btncheck1">Hotel Development</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck2" name="interests" value="Hotel Operations" />
-                  <label class="btn" for="btncheck2">Hotel Operations</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck3" name="interests" value="Revenue Management" />
-                  <label class="btn" for="btncheck3">Revenue Management</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck4" name="interests" value="Hotel Branding" />
-                  <label class="btn" for="btncheck4">Hotel Branding</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck5" name="interests" value="Franchise Partnerships" />
-                  <label class="btn" for="btncheck5">Franchise Partnerships</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck6" name="interests" value="Asset Management" />
-                  <label class="btn" for="btncheck6">Asset Management</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck7" name="interests" value="Hospitality Recruitment" />
-                  <label class="btn" for="btncheck7">Hospitality Recruitment</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck8" name="interests" value="Hospitality Technology" />
-                  <label class="btn" for="btncheck8">Hospitality Technology</label>
-                </div>
-              </div>
-              <div class="contact-field-area">
-                <div class="row g-4 mb-70">
-                  <div class="col-md-6">
-                    <div class="form-inner">
-                      <label>Full Name</label>
-                      <input type="text" name="full_name" placeholder="Mr. Daniel Robert" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-inner">
-                      <label>Email Address</label>
-                      <input type="email" name="email" placeholder="info@example.com" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-inner">
-                      <label>Phone Number</label>
-                      <input type="text" name="phone" placeholder="+1 (234) 567-580" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-inner">
-                      <label>Company</label>
-                      <input type="text" name="company" placeholder="Onetrack Express" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-inner">
-                      <label>Message</label>
-                      <textarea name="message" placeholder="Write a short note"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-inner2">
-                      <div class="form-check">
-                        <input type="checkbox" name="interests" value="Hotel Development" class="btn-check" id="btncheck1" />
-                        <label class="form-check-label" for="contactCheck1">By applying, you will agree our <a href="terms.html">privacy-policy & terms conditions.</a></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="primary-btn3" type="submit">
-                  <span data-text="Submit enquiry">Submit enquiry</span>
-                  <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+<!-- Contact Page Start -->
+<div class="contact-page mb-150">
+  <div class="container one">
+    <div class="row gy-5 justify-content-between">
+      <div class="col-lg-4 col-md-8">
+        <div class="contact-page-sidebar">
+          <p>
+            Partner with Hozpitality Consulting for expert advice on hotel
+            development, operations, branding, franchise partnerships, revenue
+            management, and hospitality business growth. We help hospitality
+            businesses turn opportunities into sustainable success.
+          </p>
+          <div class="contact-info">
+            <h2>Contact info-</h2>
+            <ul class="contact-list">
+              <li class="single-contact">
+                <div class="icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <g>
-                      <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z"></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.7146 17.1769L17.4395 18.4519L17.4093 18.4707C16.7391 18.8906 15.9075 19.1012 14.9625 19.1012C14.0665 19.1012 13.0692 18.9121 12.0099 18.534C9.86566 17.7679 7.61375 16.2754 5.66879 14.3304C3.72402 12.3855 2.23117 10.1336 1.46554 7.98943C0.6882 5.81287 0.7107 3.89529 1.52871 2.58978L1.54738 2.55978L2.82258 1.28474C3.07133 1.03591 3.40301 0.898804 3.75679 0.898804C4.11043 0.898804 4.44226 1.03591 4.69101 1.28474L7.75215 4.34568C8.0009 4.59451 8.13781 4.92654 8.13781 5.28009C8.13781 5.63392 8.0009 5.96564 7.75215 6.21443L6.53621 7.4304C6.33066 7.84837 6.37551 8.48044 6.66418 9.21716C6.98375 10.0332 7.57828 10.9011 8.33824 11.6609C9.0984 12.421 9.96637 13.0156 10.7821 13.3351C11.5191 13.6238 12.1512 13.6687 12.5691 13.4633L13.7849 12.2472C14.0336 11.9984 14.3659 11.8617 14.7193 11.8617C15.0731 11.8617 15.4048 11.9984 15.6535 12.2472L18.7146 15.3081C19.2297 15.8234 19.2297 16.6617 18.7146 17.1769Z"
+                      />
                     </g>
                   </svg>
-                </button>
-              </div>
-            </form>
+                </div>
+                <div class="content">
+                  <span>Contact Number</span>
+                  <a href="#">424-436-1491</a>
+                </div>
+              </li>
+              <li class="single-contact">
+                <div class="icon">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.9713 2.08497L14.1513 15.1875C14.0913 15.4725 13.9038 15.7125 13.6413 15.84C13.3788 15.9675 13.0788 15.9675 12.8088 15.84L10.7088 14.82C10.7088 14.82 8.02381 16.7625 7.47631 17.0175C7.37131 17.07 7.32631 17.0625 7.25131 17.0625C7.1033 17.0629 6.96112 17.0048 6.85576 16.9008C6.7504 16.7969 6.69039 16.6555 6.68881 16.5075V12.525C6.68131 12.4425 6.68881 12.36 6.73381 12.2775C6.77881 12.195 6.74131 12.2625 6.74881 12.255C6.77131 12.2175 6.79381 12.18 6.82381 12.1425L13.7313 4.58247L5.14381 11.6475C5.05143 11.7421 4.92887 11.8014 4.79736 11.8151C4.66585 11.8288 4.5337 11.796 4.42381 11.7225L1.53631 10.4175C1.21381 10.26 1.01131 9.94497 0.996311 9.58497C0.988811 9.23247 1.17631 8.90247 1.49131 8.72997L15.5913 1.05747C15.9213 0.877475 16.3113 0.907475 16.6188 1.13247C16.9188 1.35747 17.0538 1.72497 16.9788 2.08497H16.9713Z"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <span>Email Address</span>
+                  <a href="#">info@hozconsulting.com</a>
+                </div>
+              </li>
+              <li class="single-contact">
+                <div class="icon">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.00299 16.0713C9.41991 16.0713 14.6818 8.81504 14.6818 5.67873C14.6818 2.54246 12.1393 0 9.00299 0C5.86668 0 3.32422 2.54246 3.32422 5.67877C3.32422 8.81504 8.56031 16.0713 9.00299 16.0713ZM7.14422 5.5297C7.14422 4.50315 7.97639 3.67094 9.00299 3.67094C10.0296 3.67094 10.8618 4.50311 10.8618 5.5297C10.8618 6.5563 10.0296 7.38847 9.00299 7.38847C7.97639 7.38847 7.14422 6.5563 7.14422 5.5297Z"
+                    />
+                    <path
+                      d="M2.94922 16.5541C2.94922 17.3527 5.65865 18.0001 9.00085 18.0001C12.343 18.0001 15.0524 17.3527 15.0524 16.5541C15.0524 15.9199 13.3435 15.3816 10.9666 15.1865C10.8517 15.3449 10.7353 15.5022 10.6174 15.6584C9.53659 17.0865 9.29934 17.159 9.0018 17.159C8.69756 17.159 8.43622 17.058 7.37509 15.659C7.25707 15.5029 7.14055 15.3457 7.02556 15.1873C4.65364 15.383 2.94922 15.9208 2.94922 16.5541Z"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <span>Office Address</span>
+                  <a href="#"
+                    >Suite 34, 11th Floor 11845 W Olympic Blvd Los Angeles, CA
+                    90064</a
+                  >
+                </div>
+              </li>
+            </ul>
           </div>
+          {#
+          <ul class="social-list">
+            <li>
+              <a href="https://www.facebook.com/">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.19709 15V8.62433H11.5664L11.9186 6.12805H9.19709V4.53802C9.19709 3.81769 9.41817 3.3245 10.557 3.3245H12V1.09892C11.2979 1.03062 10.5922 0.997637 9.88603 1.00013C7.79177 1.00013 6.3539 2.16076 6.3539 4.29143V6.12338H4V8.61966H6.35904V15H9.19709Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.025 2H14.1722L9.48225 7.08303L15 14H10.6801L7.2965 9.80414L3.42462 14H1.2765L6.29287 8.56276L1 2H5.43013L8.48825 5.83421L12.025 2ZM11.2725 12.7818H12.4625L4.78262 3.15448H3.50688L11.2725 12.7818Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.32195 4.79697C4.12755 4.79697 4.78061 4.1439 4.78061 3.33831C4.78061 2.53271 4.12755 1.87964 3.32195 1.87964C2.51635 1.87964 1.86328 2.53271 1.86328 3.33831C1.86328 4.1439 2.51635 4.79697 3.32195 4.79697Z"
+                  ></path>
+                  <path
+                    d="M6.15717 5.90312V13.9958H8.66983V9.99379C8.66983 8.93779 8.8685 7.91512 10.1778 7.91512C11.4692 7.91512 11.4852 9.12246 11.4852 10.0605V13.9965H13.9992V9.55846C13.9992 7.37846 13.5298 5.70312 10.9818 5.70312C9.7585 5.70312 8.9385 6.37446 8.60317 7.00979H8.56917V5.90312H6.15717ZM2.0625 5.90312H4.57917V13.9958H2.0625V5.90312Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.04507 3H8.12295C8.84224 3.00267 12.4868 3.02936 13.4695 3.29807C13.7666 3.38008 14.0373 3.53993 14.2546 3.76164C14.4719 3.98336 14.6281 4.25917 14.7077 4.56153C14.7961 4.89964 14.8582 5.34718 14.9002 5.80897L14.909 5.9015L14.9282 6.13284L14.9352 6.22538C14.9921 7.03862 14.9991 7.80025 15 7.96663V8.03337C14.9991 8.20598 14.9913 9.01922 14.9282 9.86627L14.9212 9.95969L14.9134 10.0522C14.8696 10.5612 14.8049 11.0666 14.7077 11.4385C14.6281 11.7408 14.4719 12.0166 14.2546 12.2384C14.0373 12.4601 13.7666 12.6199 13.4695 12.7019C12.4545 12.9795 8.59635 12.9991 8.06169 13H7.93743C7.66704 13 6.54872 12.9947 5.37615 12.9537L5.22739 12.9484L5.15126 12.9448L5.00163 12.9386L4.85199 12.9324C3.88068 12.8888 2.95575 12.8185 2.5296 12.701C2.23263 12.6191 1.96199 12.4594 1.74472 12.2378C1.52744 12.0163 1.37113 11.7407 1.29139 11.4385C1.19426 11.0674 1.12951 10.5612 1.08576 10.0522L1.07875 9.9588L1.07175 9.86627C1.02832 9.26338 1.00439 8.65921 1 8.05472L1 7.94528C1.00175 7.75398 1.00875 7.09289 1.056 6.36329L1.06213 6.27164L1.06475 6.22538L1.07175 6.13284L1.09101 5.9015L1.09976 5.80897C1.14176 5.34718 1.20389 4.89875 1.29227 4.56153C1.37187 4.25917 1.52812 3.98336 1.74541 3.76164C1.96269 3.53993 2.2334 3.38008 2.53047 3.29807C2.95662 3.1824 3.88156 3.11122 4.85287 3.06673L5.00163 3.0605L5.15213 3.05517L5.22739 3.0525L5.37702 3.04627C6.20982 3.01904 7.04296 3.00392 7.87618 3.00089L8.04507 3ZM6.60035 5.85613V10.143L10.238 8.00044L6.60035 5.85613Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          #}
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Contact Page End -->
+      <div class="col-xl-7 col-lg-8">
+        <div class="contact-form">
+          <form method="POST" action="/contact">
+            <div class="contact-form-top mb-70">
+              <h3>I’m Interested with in...</h3>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck1"
+                  name="interests"
+                  value="Hotel Development"
+                />
+                <label class="btn" for="btncheck1">Hotel Development</label>
 
-  {% with messages=get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-      {% for category, message in messages %}
-        <div class="alert alert-success">{{ message }}</div>
-      {% endfor %}
-    {% endif %}
-  {% endwith %}
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck2"
+                  name="interests"
+                  value="Hotel Operations"
+                />
+                <label class="btn" for="btncheck2">Hotel Operations</label>
 
-  <!-- home2 Newsletter Section Start -->
-  <div class="home2-newsletter-section" style="background-image: url('{{ url_for('static', filename='assets/img/home2/home2-newsletter-bg.jpg') }}');">
-    <div class="container one">
-      <div class="row">
-        <div class="col-xl-6 col-lg-7 col-md-9">
-          <div class="newsletter-content-wrap">
-            <div class="title-area">
-              <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.5 25C13.9986 25 15.2892 24.0948 15.8554 22.8027H9.14458C9.71084 24.0948 11.0014 25 12.5 25ZM20.0684 12.1026V10.498C20.0684 7.08877 17.8022 4.19917 14.6973 3.25537V2.19727C14.6973 0.985693 13.7116 0 12.5 0C11.2884 0 10.3027 0.985693 10.3027 2.19727V3.25537C7.19775 4.19917 4.93164 7.08872 4.93164 10.498V12.1026C4.93164 15.0974 3.79013 17.937 1.71743 20.0985C1.61805 20.2021 1.55131 20.3327 1.52551 20.4739C1.4997 20.6151 1.51598 20.7608 1.57231 20.8929C1.62864 21.0249 1.72253 21.1375 1.84233 21.2166C1.96212 21.2957 2.10253 21.3379 2.24609 21.3379H22.7539C22.8975 21.3379 23.0378 21.2957 23.1576 21.2166C23.2774 21.1375 23.3713 21.0249 23.4276 20.8928C23.4839 20.7608 23.5002 20.6151 23.4744 20.4739C23.4486 20.3327 23.3819 20.2021 23.2826 20.0985C21.2099 17.937 20.0684 15.0973 20.0684 12.1026ZM13.2324 2.96523C12.9914 2.94199 12.7471 2.92969 12.5 2.92969C12.2529 2.92969 12.0086 2.94199 11.7676 2.96523V2.19727C11.7676 1.79341 12.0961 1.46484 12.5 1.46484C12.9039 1.46484 13.2324 1.79341 13.2324 2.19727V2.96523ZM22.0215 10.498C22.0215 10.9025 22.3494 11.2305 22.7539 11.2305C23.1584 11.2305 23.4863 10.9025 23.4863 10.498C23.4863 7.56348 22.3435 4.80454 20.2685 2.72949C19.9825 2.44351 19.5187 2.44346 19.2327 2.72949C18.9467 3.01553 18.9467 3.47925 19.2327 3.76528C21.0311 5.56367 22.0215 7.95474 22.0215 10.498ZM2.24609 11.2305C2.65058 11.2305 2.97851 10.9025 2.97851 10.498C2.97851 7.95479 3.96894 5.56372 5.76728 3.76533C6.05332 3.4793 6.05332 3.01558 5.76728 2.72954C5.48129 2.44351 5.01753 2.44351 4.73149 2.72954C2.65644 4.80459 1.51367 7.56348 1.51367 10.498C1.51367 10.9025 1.8416 11.2305 2.24609 11.2305Z" />
-              </svg>
-              <h3>Subscribe for Hospitality Industry Insights, Hotel Investment Trends & Business Updates</h3>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck3"
+                  name="interests"
+                  value="Revenue Management"
+                />
+                <label class="btn" for="btncheck3">Revenue Management</label>
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck4"
+                  name="interests"
+                  value="Hotel Branding"
+                />
+                <label class="btn" for="btncheck4">Hotel Branding</label>
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck5"
+                  name="interests"
+                  value="Franchise Partnerships"
+                />
+                <label class="btn" for="btncheck5"
+                  >Franchise Partnerships</label
+                >
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck6"
+                  name="interests"
+                  value="Asset Management"
+                />
+                <label class="btn" for="btncheck6">Asset Management</label>
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck7"
+                  name="interests"
+                  value="Hospitality Recruitment"
+                />
+                <label class="btn" for="btncheck7"
+                  >Hospitality Recruitment</label
+                >
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck8"
+                  name="interests"
+                  value="Hospitality Technology"
+                />
+                <label class="btn" for="btncheck8"
+                  >Hospitality Technology</label
+                >
+              </div>
             </div>
-            <form class="newsletter-form">
-              <input type="email" />
-              <button type="submit">
-                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div class="contact-field-area">
+              <div class="row g-4 mb-70">
+                <div class="col-md-6">
+                  <div class="form-inner">
+                    <label>Full Name</label>
+                    <input
+                      type="text"
+                      name="full_name"
+                      placeholder="Mr. Daniel Robert"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-inner">
+                    <label>Email Address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="info@example.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-inner">
+                    <label>Phone Number</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="+1 (234) 567-580"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-inner">
+                    <label>Company</label>
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Onetrack Express"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-inner">
+                    <label>Message</label>
+                    <textarea
+                      name="message"
+                      placeholder="Write a short note"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-inner2">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="privacyCheck"
+                        required
+                      />
+
+                      <label class="form-check-label" for="privacyCheck">
+                        By applying, you will agree our
+                        <a href="/privacy-policy">
+                          privacy policy & terms conditions
+                        </a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="primary-btn3" type="submit">
+                <span data-text="Submit enquiry">Submit enquiry</span>
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <g>
-                    <path d="M7.29166 14.6767V18.5417C7.2923 18.6731 7.33425 18.8009 7.41157 18.9071C7.48889 19.0133 7.59767 19.0924 7.72249 19.1334C7.8473 19.1743 7.98183 19.1749 8.10702 19.1351C8.2322 19.0954 8.3417 19.0172 8.42 18.9117L10.6808 15.8351L7.29166 14.6767ZM19.7375 0.115895C19.6436 0.0490233 19.533 0.00942685 19.418 0.00148505C19.303 -0.00645676 19.188 0.0175656 19.0858 0.0708953L0.33583 9.86256C0.227949 9.91958 0.13906 10.0069 0.0800727 10.1137C0.0210853 10.2205 -0.00543414 10.3422 0.00376885 10.4639C0.0129718 10.5855 0.0574969 10.7019 0.13188 10.7986C0.206263 10.8953 0.307267 10.9683 0.422497 11.0084L5.635 12.7901L16.7358 3.2984L8.14583 13.6476L16.8817 16.6334C16.9683 16.6625 17.0604 16.6723 17.1512 16.6622C17.2421 16.652 17.3297 16.6221 17.4078 16.5746C17.4859 16.527 17.5527 16.463 17.6034 16.3869C17.6542 16.3108 17.6877 16.2246 17.7017 16.1342L19.9933 0.717562C20.0103 0.603437 19.9954 0.486844 19.9502 0.380665C19.9051 0.274486 19.8315 0.182855 19.7375 0.115895Z"></path>
+                    <path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z"></path>
                   </g>
                 </svg>
               </button>
-            </form>
-            <span>Receive hospitality market insights, hotel development trends, franchise opportunities, revenue management strategies and industry updates directly in your inbox.</span>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <!-- home2 Newsletter Section End -->
+</div>
+<!-- Contact Page End -->
+
+{% with messages=get_flashed_messages(with_categories=true) %} {% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ 'danger' if category == 'error' else category }}">{{ message }}</div>
+{% endfor %} {% endif %} {% endwith %}
+
+<!-- home2 Newsletter Section Start -->
+<div
+  class="home2-newsletter-section"
+  style="background-image: url('{{ url_for('static', filename='assets/img/home2/home2-newsletter-bg.jpg') }}');"
+>
+  <div class="container one">
+    <div class="row">
+      <div class="col-xl-7 col-lg-7 col-md-9">
+        <div class="newsletter-content-wrap">
+          <div class="title-area">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 25C13.9986 25 15.2892 24.0948 15.8554 22.8027H9.14458C9.71084 24.0948 11.0014 25 12.5 25ZM20.0684 12.1026V10.498C20.0684 7.08877 17.8022 4.19917 14.6973 3.25537V2.19727C14.6973 0.985693 13.7116 0 12.5 0C11.2884 0 10.3027 0.985693 10.3027 2.19727V3.25537C7.19775 4.19917 4.93164 7.08872 4.93164 10.498V12.1026C4.93164 15.0974 3.79013 17.937 1.71743 20.0985C1.61805 20.2021 1.55131 20.3327 1.52551 20.4739C1.4997 20.6151 1.51598 20.7608 1.57231 20.8929C1.62864 21.0249 1.72253 21.1375 1.84233 21.2166C1.96212 21.2957 2.10253 21.3379 2.24609 21.3379H22.7539C22.8975 21.3379 23.0378 21.2957 23.1576 21.2166C23.2774 21.1375 23.3713 21.0249 23.4276 20.8928C23.4839 20.7608 23.5002 20.6151 23.4744 20.4739C23.4486 20.3327 23.3819 20.2021 23.2826 20.0985C21.2099 17.937 20.0684 15.0973 20.0684 12.1026ZM13.2324 2.96523C12.9914 2.94199 12.7471 2.92969 12.5 2.92969C12.2529 2.92969 12.0086 2.94199 11.7676 2.96523V2.19727C11.7676 1.79341 12.0961 1.46484 12.5 1.46484C12.9039 1.46484 13.2324 1.79341 13.2324 2.19727V2.96523ZM22.0215 10.498C22.0215 10.9025 22.3494 11.2305 22.7539 11.2305C23.1584 11.2305 23.4863 10.9025 23.4863 10.498C23.4863 7.56348 22.3435 4.80454 20.2685 2.72949C19.9825 2.44351 19.5187 2.44346 19.2327 2.72949C18.9467 3.01553 18.9467 3.47925 19.2327 3.76528C21.0311 5.56367 22.0215 7.95474 22.0215 10.498ZM2.24609 11.2305C2.65058 11.2305 2.97851 10.9025 2.97851 10.498C2.97851 7.95479 3.96894 5.56372 5.76728 3.76533C6.05332 3.4793 6.05332 3.01558 5.76728 2.72954C5.48129 2.44351 5.01753 2.44351 4.73149 2.72954C2.65644 4.80459 1.51367 7.56348 1.51367 10.498C1.51367 10.9025 1.8416 11.2305 2.24609 11.2305Z"
+              />
+            </svg>
+            <h3>
+              Join Hospitality Leaders, Hotel Owners & Investors Receiving
+              Exclusive Industry Insights
+            </h3>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" />
+            <button type="submit">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M7.29166 14.6767V18.5417C7.2923 18.6731 7.33425 18.8009 7.41157 18.9071C7.48889 19.0133 7.59767 19.0924 7.72249 19.1334C7.8473 19.1743 7.98183 19.1749 8.10702 19.1351C8.2322 19.0954 8.3417 19.0172 8.42 18.9117L10.6808 15.8351L7.29166 14.6767ZM19.7375 0.115895C19.6436 0.0490233 19.533 0.00942685 19.418 0.00148505C19.303 -0.00645676 19.188 0.0175656 19.0858 0.0708953L0.33583 9.86256C0.227949 9.91958 0.13906 10.0069 0.0800727 10.1137C0.0210853 10.2205 -0.00543414 10.3422 0.00376885 10.4639C0.0129718 10.5855 0.0574969 10.7019 0.13188 10.7986C0.206263 10.8953 0.307267 10.9683 0.422497 11.0084L5.635 12.7901L16.7358 3.2984L8.14583 13.6476L16.8817 16.6334C16.9683 16.6625 17.0604 16.6723 17.1512 16.6622C17.2421 16.652 17.3297 16.6221 17.4078 16.5746C17.4859 16.527 17.5527 16.463 17.6034 16.3869C17.6542 16.3108 17.6877 16.2246 17.7017 16.1342L19.9933 0.717562C20.0103 0.603437 19.9954 0.486844 19.9502 0.380665C19.9051 0.274486 19.8315 0.182855 19.7375 0.115895Z"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </form>
+          <span>
+            Subscribe to receive hotel investment opportunities, market
+            intelligence, franchise expansion updates, operational best
+            practices, and strategic hospitality consulting insights from
+            industry experts.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- home2 Newsletter Section End -->
 {% endblock %}
