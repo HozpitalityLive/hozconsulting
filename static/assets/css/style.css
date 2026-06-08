@@ -1260,6 +1260,7 @@ body.tt-magic-cursor #magic-cursor {
   position: relative;
   z-index: 1;
   transition: 0.5s;
+  border-radius: 10px;
 }
 
 @media (max-width: 576px) {
@@ -1636,6 +1637,7 @@ body.tt-magic-cursor #magic-cursor {
   padding: 10px 20px;
   height: 60px;
   border: 1px solid var(--borders-color);
+  border-radius: 15px;
 }
 
 @media (max-width: 576px) {
@@ -1668,6 +1670,7 @@ body.tt-magic-cursor #magic-cursor {
   padding: 20px 25px;
   min-height: 150px;
   resize: none;
+  border-radius: 20px;
 }
 
 @media (max-width: 576px) {
@@ -4800,6 +4803,8 @@ header.style-1.home2-header.two .primary-btn1 {
   margin-right: 36px;
   overflow-y: scroll;
   max-height: 800px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 @media (max-width: 1899px) {
@@ -4900,12 +4905,12 @@ header.style-1.home2-header.two .primary-btn1 {
 }
 
 .right-sidebar-menu .sidebar-content-wrap .company-logo-and-short-info .company-logo img {
-  width: 148px;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
   .right-sidebar-menu .sidebar-content-wrap .company-logo-and-short-info .company-logo img {
-    width: 130px;
+    width: 100%;
   }
 }
 
@@ -4925,30 +4930,30 @@ header.style-1.home2-header.two .primary-btn1 {
 }
 
 .right-sidebar-menu .sidebar-content-wrap .address-area {
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {
   .right-sidebar-menu .sidebar-content-wrap .address-area {
-    margin-bottom: 55px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 1399px) {
   .right-sidebar-menu .sidebar-content-wrap .address-area {
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 }
 
 @media (max-width: 767px) {
   .right-sidebar-menu .sidebar-content-wrap .address-area {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
 }
 
 @media (max-width: 576px) {
   .right-sidebar-menu .sidebar-content-wrap .address-area {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -4993,30 +4998,30 @@ header.style-1.home2-header.two .primary-btn1 {
 }
 
 .right-sidebar-menu .sidebar-content-wrap .contact-area {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {
   .right-sidebar-menu .sidebar-content-wrap .contact-area {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 1399px) {
   .right-sidebar-menu .sidebar-content-wrap .contact-area {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 767px) {
   .right-sidebar-menu .sidebar-content-wrap .contact-area {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 576px) {
   .right-sidebar-menu .sidebar-content-wrap .contact-area {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -6494,18 +6499,18 @@ header.style-1.home2-header.two .primary-btn1 {
 
 .service-card .service-content {
   position: relative;
-  min-height: 255px;
+  min-height: 220px;
 }
 
 @media (max-width: 1399px) {
   .service-card .service-content {
-    min-height: 245px;
+    min-height: 220px;
   }
 }
 
 @media (max-width: 576px) {
   .service-card .service-content {
-    min-height: 235px;
+    min-height: 220px;
   }
 }
 
@@ -6550,7 +6555,7 @@ header.style-1.home2-header.two .primary-btn1 {
   margin: 0;
   list-style: none;
   padding: 38px 35px 25px 35px;
-  background-color: #f1eeea;
+  background-color: #eceaf1;
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {
@@ -11187,7 +11192,7 @@ header.style-1.home2-header.two .primary-btn1 {
 }
 
 .home2-business-challenge-section .business-challenge-card .hover-card-content .growth-percentage-area h2 {
-  color: var(--title-color);
+  color: #342369;
   font-family: var(--font-inteTight);
   font-weight: 500;
   font-size: 50px;
@@ -11240,8 +11245,8 @@ header.style-1.home2-header.two .primary-btn1 {
 
 .home2-business-challenge-section .business-challenge-card .hover-card-content img {
   min-height: 120px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .home2-business-challenge-section .business-challenge-card:hover .initial-card-content {
@@ -29820,6 +29825,7 @@ header.style-1.home2-header.two .primary-btn1 {
 .contact-page .contact-page-sidebar .contact-info {
   padding: 50px 35px 45px;
   background-color: var(--primary-color2);
+  border-radius: 30px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -29993,6 +29999,7 @@ header.style-1.home2-header.two .primary-btn1 {
 .contact-page .contact-form {
   padding: 55px 45px 60px;
   border: 1px solid var(--borders-color);
+  border-radius: 30px;
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -30320,12 +30327,11 @@ header.style-1.home2-header.two .primary-btn1 {
 .contact-page-map-indicator-section .location-area {
   position: relative;
   z-index: 3;
-  margin-top: -224px;
 }
 
 @media (max-width: 576px) {
   .contact-page-map-indicator-section .location-area {
-    margin-top: -180px;
+    margin-top: 0px;
   }
 }
 
@@ -30340,6 +30346,7 @@ header.style-1.home2-header.two .primary-btn1 {
   border: 1px solid var(--borders-color);
   text-align: center;
   transition: all 0.3s ease;
+  border-radius: 20px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

@@ -34,7 +34,7 @@
     </div>
   </div>
   <!-- Breadcrumb Section End -->
-
+   
   <!-- Blog Details Page Start -->
   <div class="blog-details-page mb-140">
     <div class="container one">
@@ -50,7 +50,6 @@
 
               <div class="author-info">
                 <strong class="author-name">{{ blog.author_name }}</strong>
-
                 <div class="meta">
                   <span class="date">
                     Last Update :
@@ -65,7 +64,6 @@
             <span class="line-break"></span>
             <span class="line-break"></span>
             <div class="blog-content-area">{{ blog.short_description|safe }}</div>
-
             <span class="line-break"></span>
             <span class="line-break"></span>
             <h3 class="blog-sub-title">Focus Keywords</h3>
@@ -105,9 +103,7 @@
               </p>
               <cite>— Andreson, CEO & Chief Consultant</cite>
             </blockquote>
-
             <div class="blog-content-area">{{ blog_content|safe }}</div>
-
             <div class="tag-and-social-area">
               <h3 class="tag-title">Tags:</h3>
               <span class="line-break"></span>
@@ -336,15 +332,11 @@
             <div class="blog-card two">
               <div class="blog-content">
                 <a href="{{ url_for('blog_details', slug=item.slug) }}" class="category">{{ item.category }}</a>
-
                 <h2><a href="{{ url_for('blog_details', slug=item.slug) }}">{{ item.title }}</a></h2>
-
                 {% if item.image %}
                   <a href="{{ url_for('blog_details', slug=item.slug) }}" class="blog-img"><img src="{{ url_for('static', filename='uploads/blogs/' + item.image) }}" alt="{{ item.title }}" /></a>
                 {% endif %}
-
                 <p>{{ item.short_description }}</p>
-
                 <a href="{{ url_for('blog_details', slug=item.slug) }}" class="read-more-btn">Read more</a>
               </div>
             </div>
