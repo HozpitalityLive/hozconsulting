@@ -254,6 +254,17 @@ def contact():
 def about():
     return render_template('pages/about.html')
 
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('pages/privacy-policy.html')
+
+@app.route('/terms-conditions')
+def terms_conditions():
+    return render_template('pages/terms-conditions.html')
+
+@app.route('/faqs')
+def faqs():
+    return render_template('pages/faqs.html')
 
 @app.route('/services')
 def services():

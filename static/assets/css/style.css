@@ -1,80 +1,5 @@
 @charset "UTF-8";
 /*===========================
-Project Name: Aventis - Modern Business Consulting HTML Template.
-Author: Egens Lab --> (https://www.egenslab.com/)
-Support: https://www.account.egenslab.com/
-Developer: Abid Hossain Chowdhury --> hello@egenslab.com
-Version: 1.0
-
-
-01.COMMON CSS 
-02. Mixins Css
-03. Header CSS
-04. Home1 Banner Section CSS
-05. Home1 About Section CSS
-06. Home1 Partner Section CSS
-07. Home1 Service Section CSS
-08. Home1 Industry Section CSS
-09. Home1 Banner2 Section CSS
-10. Home1 Why Choose Section CSS
-11. Home1 Company Growth Section CSS
-12. Home1 Testimonial Section CSS
-13. Home1 Blog Section CSS
-14. Home1 Contact Section CSS
-15. Home1 Faq Section CSS
-16. Home1 Footer Section CSS
-17. Home2 Banner Section CSS
-18. Home2 Business Challenge Section CSS
-19. Home2 Banner2 Section CSS
-20. Home2 Service Section CSS
-21. Home2 Business value Section CSS
-22. Home2 Industry Section CSS
-23. Home2 Testimonial Section CSS
-24. Home2 Estimate Tax Section CSS
-25. Home2 Blog Section CSS
-26. Home2 Blog Section CSS
-27. Home3 Banner Section CSS
-28. Home3 Counter Section CSS
-29. Home3 Service Section CSS
-30. Home3 Banner2 Section CSS
-31. Home3 Service Section CSS
-32. Home3 Industry Section CSS
-33. Home3 Founder Section CSS
-34. Home3 Process Section CSS
-35. Home3 Tax Calculation Section CSS
-36. Home3 Testimonial Section CSS
-37. Home3 Blog Section CSS
-38. Home3 Contact Section CSS
-39. Breadcrumb Section CSS
-40. Blog Page CSS
-41. Blog Standard Page CSS
-42. Blog Details Page CSS
-43. Solution Page CSS
-44. Solution2 Page CSS
-45. Solution Default Page CSS
-46. Solution Details Page CSS
-47. Industry1 Page CSS
-48. Industry Default Page CSS
-49. Industry Details Page CSS
-50. Case Study Page CSS
-51. Case Study Details Page CSS
-52. Pricing Plan Page CSS
-53. Terms Page CSS
-54. Career Page CSS
-55. Career Details Page CSS
-56. Shop Details Page CSS
-57. Cart Page CSS
-58. Checkout Page CSS
-59. Product Details Page CSS
-60. People Page CSS
-61. People Details Page CSS
-62. About Page CSS
-63. Error Page CSS
-64. Webinar Event Page CSS
-65. Contact Page CSS
-
-
-/*===========================
   01.COMMON CSS 
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap");
@@ -103,6 +28,10 @@ Version: 1.0
   --primary-color2-opc: 25, 49, 51;
   --borders-color: #e8e8e8;
   --borders-color-opc: 232, 232, 232;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 /*================================================
@@ -17200,7 +17129,7 @@ header.style-1.home2-header.two .primary-btn1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 100px 0 170px;
+  padding: 130px 0 130px;
   position: relative;
 }
 
@@ -23323,6 +23252,7 @@ header.style-1.home2-header.two .primary-btn1 {
   background-color: #f0f0f0;
   border: 1px solid var(--borders-color);
   margin-bottom: 40px;
+  border-radius: 20px;
 }
 
 @media (max-width: 767px) {
@@ -23462,7 +23392,7 @@ header.style-1.home2-header.two .primary-btn1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   display: flex;
   align-items: start;
   gap: 15px;
@@ -23482,7 +23412,7 @@ header.style-1.home2-header.two .primary-btn1 {
 
 @media (max-width: 1199px) {
   .terms-page .terms-page-content-wrap .terms-list li ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -23510,6 +23440,8 @@ header.style-1.home2-header.two .primary-btn1 {
 .terms-page .terms-page-sidebar .contact-area {
   padding: 45px 35px 50px;
   background-color: #f1eeea;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1399px) {
