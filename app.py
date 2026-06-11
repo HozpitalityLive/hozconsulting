@@ -1,7 +1,6 @@
 
 import os
 
-from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
@@ -13,17 +12,32 @@ from flask import (
     render_template,
     request,
     redirect,
-    flash
+    flash,
+    url_for
 )
 
 from flask_mail import Mail, Message
-
+from flask_admin import BaseView, expose
 from bs4 import BeautifulSoup
 from markupsafe import Markup
 from slugify import slugify
 from wtforms import TextAreaField
 
+from flask import redirect, url_for
+from flask_login import (
+    LoginManager,
+    UserMixin,
+    login_user,
+    logout_user,
+    login_required,
+    current_user
+)
+
 app = Flask(__name__)
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "admin_login"
 
 # SECRET KEY
 app.config['SECRET_KEY'] = 'hozflask-secret-key'
@@ -49,6 +63,17 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads/blogs'
 
 # DATABASE INIT
 db = SQLAlchemy(app)
+
+class AdminUser(UserMixin):
+    id = "admin"
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    if user_id == "admin":
+        return AdminUser()
+    return None
+
 
 # BLOG MODEL
 class Blog(db.Model):
@@ -114,8 +139,15 @@ class Blog(db.Model):
 # CUSTOM ADMIN VIEW
 class BlogAdmin(ModelView):
 
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for("admin_login"))
+
     create_template = 'admin/blog_create.html'
     edit_template = 'admin/blog_edit.html'
+
     form_columns = [
         'title',
         'slug',
@@ -162,11 +194,17 @@ class BlogAdmin(ModelView):
             relative_path=''
         )
 
-
     }
 
     can_view_details = True
     page_size = 20
+
+class LogoutView(BaseView):
+
+    @expose('/')
+    def index(self):
+        logout_user()
+        return redirect('/admin-login')
 
 # WEBSITE ROUTES
 admin = Admin(
@@ -180,6 +218,46 @@ admin.add_view(
         db.session
     )
 )
+
+admin.add_view(
+    LogoutView(
+        name='Login',
+        endpoint='Login'
+    )
+)
+
+admin.add_view(
+    LogoutView(
+        name='Logout',
+        endpoint='logout'
+    )
+)
+
+@app.route('/admin-login', methods=['GET', 'POST'])
+def admin_login():
+
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        if (
+            username == 'admin'
+            and
+            password == 'Admin@2026'
+        ):
+
+            user = AdminUser()
+            login_user(user)
+
+            return redirect('/admin')
+        flash('Invalid username or password', 'danger')
+    return render_template('admin/login.html')
+
+@app.route('/admin-logout')
+@login_required
+def admin_logout():
+    logout_user()
+    return redirect('/admin-login')
 
 @app.route('/')
 def home():
@@ -270,16 +348,13 @@ def faqs():
 def services():
     return render_template('pages/services.html')
 
-
 @app.route('/hotel-owners')
 def hotel_owners():
     return render_template('pages/hotel-owners.html')
 
-
 @app.route('/franchise-partnerships')
 def franchise_partnerships():
     return render_template('pages/franchise-partnerships.html')
-
 
 # BLOG LISTING PAGE
 @app.route('/blogs')
