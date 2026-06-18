@@ -72,6 +72,9 @@
         {% include 'partials/footer.html' %}
       </div>
     </div>
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Email Decode -->
     <script data-cfasync="false" src="{{ url_for('static', filename='email-decode.min.js') }}"></script>
     <!-- jQuery -->
@@ -97,5 +100,6 @@
     <script src="{{ url_for('static', filename='assets/js/jquery.fancybox.min.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+
   </body>
 </html>

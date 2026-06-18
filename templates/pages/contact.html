@@ -42,11 +42,18 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
 </div>
 <!-- Breadcrumb Section End -->
 
+{% with messages=get_flashed_messages(with_categories=true) %} {% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ 'danger' if category == 'error' else category }}">
+  {{ message }}
+</div>
+{% endfor %} {% endif %} {% endwith %}
+
 <!-- Contact Page Start -->
 <div class="contact-page mb-150">
   <div class="container one">
     <div class="row gy-5 justify-content-between">
-      <div class="col-lg-4 col-md-8">
+      <div class="col-lg-5 col-md-8">
         <div class="contact-page-sidebar">
           <p>
             Partner with Hozpitality Consulting for expert advice on hotel
@@ -76,7 +83,7 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                 </div>
                 <div class="content">
                   <span>Contact Number</span>
-                  <a href="#">424-436-1491</a>
+                  <a href="#">424 316 6627</a>
                 </div>
               </li>
               <li class="single-contact">
@@ -116,9 +123,8 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                 <div class="content">
                   <span>Office Address</span>
                   <a href="#"
-                    >Suite 34, 11th Floor 11845 W Olympic Blvd Los Angeles, CA
-                    90064</a
-                  >
+                    >Suite 34, 11th Floor  <br/>
+                  11845 W Olympic Blvd Los Angeles, CA 90064. </a>
                 </div>
               </li>
             </ul>
@@ -285,31 +291,34 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
               <div class="row g-4 mb-70">
                 <div class="col-md-6">
                   <div class="form-inner">
-                    <label>Full Name</label>
+                    <label>Full Name *</label>
                     <input
                       type="text"
                       name="full_name"
-                      placeholder="Mr. Daniel Robert"
+                      placeholder="Enter your Full Name"
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-inner">
-                    <label>Email Address</label>
+                    <label>Email Address *</label>
                     <input
                       type="email"
                       name="email"
                       placeholder="info@example.com"
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-inner">
-                    <label>Phone Number</label>
+                    <label>Phone Number *</label>
                     <input
                       type="text"
                       name="phone"
                       placeholder="+1 (234) 567-580"
+                      required
                     />
                   </div>
                 </div>
@@ -319,7 +328,7 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                     <input
                       type="text"
                       name="company"
-                      placeholder="Onetrack Express"
+                      placeholder="Enter your Company Name"
                     />
                   </div>
                 </div>
@@ -352,6 +361,12 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                   </div>
                 </div>
               </div>
+              <div class="col-md-12 mb-3">
+                  <div
+                      class="g-recaptcha"
+                      data-sitekey="{{ recaptcha_site_key }}">
+                  </div>
+              </div>
               <button class="primary-btn3" type="submit">
                 <span data-text="Submit enquiry">Submit enquiry</span>
                 <svg
@@ -365,6 +380,7 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                   </g>
                 </svg>
               </button>
+
             </div>
           </form>
         </div>
@@ -374,65 +390,6 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
 </div>
 <!-- Contact Page End -->
 
-{% with messages=get_flashed_messages(with_categories=true) %} {% if messages %}
-{% for category, message in messages %}
-<div class="alert alert-{{ 'danger' if category == 'error' else category }}">
-  {{ message }}
-</div>
-{% endfor %} {% endif %} {% endwith %}
 
-<!-- home2 Newsletter Section Start -->
-<div
-  class="home2-newsletter-section"
-  style="background-image: url('{{ url_for('static', filename='assets/img/home2/home2-newsletter-bg.jpg') }}');"
->
-  <div class="container one">
-    <div class="row">
-      <div class="col-xl-7 col-lg-7 col-md-9">
-        <div class="newsletter-content-wrap">
-          <div class="title-area">
-            <svg
-              width="25"
-              height="25"
-              viewBox="0 0 25 25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.5 25C13.9986 25 15.2892 24.0948 15.8554 22.8027H9.14458C9.71084 24.0948 11.0014 25 12.5 25ZM20.0684 12.1026V10.498C20.0684 7.08877 17.8022 4.19917 14.6973 3.25537V2.19727C14.6973 0.985693 13.7116 0 12.5 0C11.2884 0 10.3027 0.985693 10.3027 2.19727V3.25537C7.19775 4.19917 4.93164 7.08872 4.93164 10.498V12.1026C4.93164 15.0974 3.79013 17.937 1.71743 20.0985C1.61805 20.2021 1.55131 20.3327 1.52551 20.4739C1.4997 20.6151 1.51598 20.7608 1.57231 20.8929C1.62864 21.0249 1.72253 21.1375 1.84233 21.2166C1.96212 21.2957 2.10253 21.3379 2.24609 21.3379H22.7539C22.8975 21.3379 23.0378 21.2957 23.1576 21.2166C23.2774 21.1375 23.3713 21.0249 23.4276 20.8928C23.4839 20.7608 23.5002 20.6151 23.4744 20.4739C23.4486 20.3327 23.3819 20.2021 23.2826 20.0985C21.2099 17.937 20.0684 15.0973 20.0684 12.1026ZM13.2324 2.96523C12.9914 2.94199 12.7471 2.92969 12.5 2.92969C12.2529 2.92969 12.0086 2.94199 11.7676 2.96523V2.19727C11.7676 1.79341 12.0961 1.46484 12.5 1.46484C12.9039 1.46484 13.2324 1.79341 13.2324 2.19727V2.96523ZM22.0215 10.498C22.0215 10.9025 22.3494 11.2305 22.7539 11.2305C23.1584 11.2305 23.4863 10.9025 23.4863 10.498C23.4863 7.56348 22.3435 4.80454 20.2685 2.72949C19.9825 2.44351 19.5187 2.44346 19.2327 2.72949C18.9467 3.01553 18.9467 3.47925 19.2327 3.76528C21.0311 5.56367 22.0215 7.95474 22.0215 10.498ZM2.24609 11.2305C2.65058 11.2305 2.97851 10.9025 2.97851 10.498C2.97851 7.95479 3.96894 5.56372 5.76728 3.76533C6.05332 3.4793 6.05332 3.01558 5.76728 2.72954C5.48129 2.44351 5.01753 2.44351 4.73149 2.72954C2.65644 4.80459 1.51367 7.56348 1.51367 10.498C1.51367 10.9025 1.8416 11.2305 2.24609 11.2305Z"
-              />
-            </svg>
-            <h3>
-              Join Hospitality Leaders, Hotel Owners & Investors Receiving
-              Exclusive Industry Insights
-            </h3>
-          </div>
-          <form class="newsletter-form">
-            <input type="email" />
-            <button type="submit">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <path
-                    d="M7.29166 14.6767V18.5417C7.2923 18.6731 7.33425 18.8009 7.41157 18.9071C7.48889 19.0133 7.59767 19.0924 7.72249 19.1334C7.8473 19.1743 7.98183 19.1749 8.10702 19.1351C8.2322 19.0954 8.3417 19.0172 8.42 18.9117L10.6808 15.8351L7.29166 14.6767ZM19.7375 0.115895C19.6436 0.0490233 19.533 0.00942685 19.418 0.00148505C19.303 -0.00645676 19.188 0.0175656 19.0858 0.0708953L0.33583 9.86256C0.227949 9.91958 0.13906 10.0069 0.0800727 10.1137C0.0210853 10.2205 -0.00543414 10.3422 0.00376885 10.4639C0.0129718 10.5855 0.0574969 10.7019 0.13188 10.7986C0.206263 10.8953 0.307267 10.9683 0.422497 11.0084L5.635 12.7901L16.7358 3.2984L8.14583 13.6476L16.8817 16.6334C16.9683 16.6625 17.0604 16.6723 17.1512 16.6622C17.2421 16.652 17.3297 16.6221 17.4078 16.5746C17.4859 16.527 17.5527 16.463 17.6034 16.3869C17.6542 16.3108 17.6877 16.2246 17.7017 16.1342L19.9933 0.717562C20.0103 0.603437 19.9954 0.486844 19.9502 0.380665C19.9051 0.274486 19.8315 0.182855 19.7375 0.115895Z"
-                  ></path>
-                </g>
-              </svg>
-            </button>
-          </form>
-          <span>
-            Subscribe to receive hotel investment opportunities, market
-            intelligence, franchise expansion updates, operational best
-            practices, and strategic hospitality consulting insights from
-            industry experts.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- home2 Newsletter Section End -->
+
 {% endblock %}

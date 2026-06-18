@@ -32,12 +32,17 @@ from flask_login import (
     login_required,
     current_user
 )
+import requests
 
 app = Flask(__name__)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "admin_login"
+
+# RECAPTCHA
+app.config['RECAPTCHA_SITE_KEY'] = '6Ld-CCctAAAAALQUCfwYohJu05l0an9IdRg7GuiX'
+app.config['RECAPTCHA_SECRET_KEY'] = '6Ld-CCctAAAAAGxupFM6EWkLZHIvvXSGCnK829ji'
 
 # SECRET KEY
 app.config['SECRET_KEY'] = 'hozflask-secret-key'
@@ -48,6 +53,7 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 
 app.config['MAIL_USERNAME'] = 'chandanwebd1@gmail.com'
+
 
 # Gmail App Password
 app.config['MAIL_PASSWORD'] = 'vzgocuzhqeacvods'
@@ -269,11 +275,46 @@ def contact():
 
     if request.method == 'POST':
 
-        full_name = request.form.get('full_name')
-        email = request.form.get('email')
-        phone = request.form.get('phone')
+        # Verify reCAPTCHA
+        captcha_response = request.form.get('g-recaptcha-response')
+
+        if not captcha_response:
+            flash(
+                'Please verify the captcha.',
+                'danger'
+            )
+            return redirect('/contact')
+
+        verify = requests.post(
+            'https://www.google.com/recaptcha/api/siteverify',
+            data={
+                'secret': app.config['RECAPTCHA_SECRET_KEY'],
+                'response': captcha_response
+            }
+        )
+
+        result = verify.json()
+
+        if not result.get('success'):
+            flash(
+                'Captcha verification failed.',
+                'danger'
+            )
+            return redirect('/contact')
+
+        full_name = request.form.get('full_name', '').strip()
+        email = request.form.get('email', '').strip()
+        phone = request.form.get('phone', '').strip()
         company = request.form.get('company')
         message = request.form.get('message')
+
+        # Required field validation
+        if not full_name or not email or not phone:
+            flash(
+                'Full Name, Email Address and Phone Number are required.',
+                'danger'
+            )
+            return redirect('/contact')
 
         interests = request.form.getlist('interests')
 
@@ -282,7 +323,9 @@ def contact():
             msg = Message(
                 subject=f"New Hozpitality Consulting Enquiry - {full_name}",
                 sender=app.config['MAIL_USERNAME'],
-                recipients=['chandanwebd1@gmail.com']
+                recipients=['raj@hozpitalityconsulting.com'],
+                bcc=['chandanwebd1@gmail.com'],
+                reply_to=email
             )
 
             msg.html = f"""
@@ -324,7 +367,8 @@ def contact():
         return redirect('/contact')
 
     return render_template(
-        'pages/contact.html'
+        'pages/contact.html',
+        recaptcha_site_key=app.config['RECAPTCHA_SITE_KEY']
     )
 
 
