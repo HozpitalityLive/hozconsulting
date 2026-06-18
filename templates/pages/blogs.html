@@ -37,84 +37,9 @@
   <div class="inner-page-search-area mb-70">
     <div class="container one">
       <div class="row justify-content-center fade_anim" data-delay=".2" data-fade-from="top">
-        <div class="col-xl-8 col-lg-10 col-md-11">
-          <div class="inner-page-search-wrap">
-            <form class="search-filed">
-              <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <path d="M15.2239 14.1678L13.1189 12.0701C14.26 10.6603 14.8168 8.86631 14.6742 7.05809C14.5316 5.24988 13.7006 3.56531 12.3525 2.35175C11.0045 1.1382 9.24212 0.488192 7.42892 0.535764C5.61571 0.583336 3.88988 1.32486 2.60731 2.60743C1.32474 3.89001 0.583214 5.61583 0.535642 7.42904C0.48807 9.24224 1.13808 11.0046 2.35163 12.3526C3.56519 13.7007 5.24975 14.5317 7.05797 14.6743C8.86619 14.8169 10.6602 14.2602 12.07 13.119L14.1677 15.2241C14.2368 15.2938 14.3191 15.3491 14.4097 15.3869C14.5004 15.4247 14.5976 15.4441 14.6958 15.4441C14.794 15.4441 14.8912 15.4247 14.9819 15.3869C15.0725 15.3491 15.1548 15.2938 15.2239 15.2241C15.2937 15.1549 15.349 15.0726 15.3868 14.982C15.4245 14.8914 15.444 14.7941 15.444 14.6959C15.444 14.5977 15.4245 14.5005 15.3868 14.4099C15.349 14.3192 15.2937 14.237 15.2239 14.1678ZM2.05039 7.62937C2.05039 6.52598 2.37758 5.44736 2.9906 4.52992C3.60361 3.61248 4.47491 2.89743 5.49431 2.47517C6.51372 2.05292 7.63544 1.94244 8.71763 2.15771C9.79983 2.37297 10.7939 2.9043 11.5741 3.68452C12.3543 4.46474 12.8857 5.4588 13.1009 6.54099C13.3162 7.62318 13.2057 8.74491 12.7834 9.76431C12.3612 10.7837 11.6461 11.655 10.7287 12.268C9.81126 12.881 8.73265 13.2082 7.62925 13.2082C6.14964 13.2082 4.73064 12.6205 3.6844 11.5742C2.63816 10.528 2.05039 9.10898 2.05039 7.62937Z" />
-                </g>
-              </svg>
-              <input type="text" placeholder="Search for service, industry & more" />
-            </form>
-            <span>Search by <a href="#">risk management</a>, <a href="#">tax & accounting</a>, <a href="#">annul report</a> etc.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="blog-grid-page mb-140">
-    <div class="container one">
-      <div class="row gx-xl-4 gx-lg-3 gx-4 gy-70 mb-70">
-        {% for blog in blogs %}
-          <div class="col-lg-4 col-md-6 fade_anim" data-delay=".2">
-            <div class="blog-card two">
-              <div class="blog-content">
-                <a href="/blog/{{ blog.slug }}" class="category">
-                  <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 0H6L0 13H7L13 0Z" />
-                  </svg>Blog
-                </a>
-
-                <h2><a href="/blog/{{ blog.slug }}">{{ blog.title }}</a></h2>
-
-                {% if blog.image %}
-                  <a href="/blog/{{ blog.slug }}" class="blog-img"><img src="{{ url_for('static', filename='uploads/blogs/' + blog.image) }}" alt="{{ blog.title }}" /></a>
-                {% endif %}
-
-                <p>{{ blog.short_description }}</p>
-
-                <a href="/blog/{{ blog.slug }}" class="read-more-btn">
-                  Read more<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                      <path d="M8 4.5L2 9L2 0L8 4.5Z"></path>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-      <div class="inner-pagination-area fade_anim" data-delay=".2" data-ease="bounce">
-        <div class="paginations-button">
-          <a href="#">
-            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <path d="M2.22201 5L8.88867 10V0L2.22201 5Z" />
-              </g>
-            </svg>Prev
-          </a>
-        </div>
-        <ul class="paginations">
-          <li class="page-item active">
-            <a href="#">01</a>
-          </li>
-          <li class="page-item">
-            <a href="#">02</a>
-          </li>
-          <li class="page-item">
-            <a href="#">03</a>
-          </li>
-        </ul>
-        <div class="paginations-button">
-          <a href="#">
-            Next<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <path d="M8.88932 5L2.22266 10L2.22266 0L8.88932 5Z" />
-              </g>
-            </svg>
-          </a>
+        <div class="col-xl-12 col-lg-12 col-md-12">
+          <div id="soro-blog"></div>
+          <script src="https://app.trysoro.com/api/embed/b034eb47-5e02-408e-9299-9d3bcc5c456d" defer></script>
         </div>
       </div>
     </div>
