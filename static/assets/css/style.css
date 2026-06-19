@@ -30402,6 +30402,7 @@ header.style-1.home2-header.two .primary-btn1 {
 
 /*# sourceMappingURL=style.css.map */
 
+
 .soro-blog-card-image {
     width: 100% !important;
     height: auto !important;
@@ -30427,16 +30428,25 @@ header.style-1.home2-header.two .primary-btn1 {
     background: transparent;
 }
 
-/* Blog Listing Only */
-.soro-blog-content:has(.soro-blog-card) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* Blog Listing */
+.soro-blog-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
 }
 
-/* Detail Page */
-.soro-blog-content:not(:has(.soro-blog-card)) {
-    display: block;
+/* Tablet */
+@media (max-width: 991px) {
+    .soro-blog-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .soro-blog-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .soro-blog-card {
