@@ -275,15 +275,9 @@ def contact():
 
     if request.method == 'POST':
 
-        # Verify reCAPTCHA
-        captcha_response = request.form.get('g-recaptcha-response')
-
-        if not captcha_response:
-            flash(
-                'Please verify the captcha.',
-                'danger'
-            )
-            return redirect('/contact')
+        captcha_response = request.form.get(
+            'g-recaptcha-response'
+        )
 
         verify = requests.post(
             'https://www.google.com/recaptcha/api/siteverify',
@@ -295,9 +289,27 @@ def contact():
 
         result = verify.json()
 
+        print("reCAPTCHA Result:", result)
+
         if not result.get('success'):
             flash(
                 'Captcha verification failed.',
+                'danger'
+            )
+            return redirect('/contact')
+
+        # Validate action
+        if result.get('action') != 'contact_form':
+            flash(
+                'Invalid captcha action.',
+                'danger'
+            )
+            return redirect('/contact')
+
+        # Validate score
+        if result.get('score', 0) < 0.5:
+            flash(
+                'Spam activity detected.',
                 'danger'
             )
             return redirect('/contact')

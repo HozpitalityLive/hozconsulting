@@ -73,7 +73,27 @@
       </div>
     </div>
     
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {% if recaptcha_site_key %}
+    <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+
+    <script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute(
+            '{{ recaptcha_site_key }}',
+            {action: 'contact_form'}
+        ).then(function (token) {
+
+            const field = document.getElementById(
+                'g-recaptcha-response'
+            );
+
+            if (field) {
+                field.value = token;
+            }
+        });
+    });
+    </script>
+    {% endif %}
 
     <!-- Email Decode -->
     <script data-cfasync="false" src="{{ url_for('static', filename='email-decode.min.js') }}"></script>

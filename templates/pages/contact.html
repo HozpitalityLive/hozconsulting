@@ -32,7 +32,7 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                   />
                 </g>
               </svg>
-              >Contact Us
+              Contact Us
             </li>
           </ul>
         </div>
@@ -42,17 +42,18 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
 </div>
 <!-- Breadcrumb Section End -->
 
-{% with messages=get_flashed_messages(with_categories=true) %} {% if messages %}
-{% for category, message in messages %}
-<div class="alert alert-{{ 'danger' if category == 'error' else category }}">
-  {{ message }}
-</div>
-{% endfor %} {% endif %} {% endwith %}
+
 
 <!-- Contact Page Start -->
 <div class="contact-page mb-150">
   <div class="container one">
-    <div class="row gy-5 justify-content-between">
+    {% with messages=get_flashed_messages(with_categories=true) %} {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ 'danger' if category == 'error' else category }}">
+      {{ message }}
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+    <div class="row gy-5 justify-content-between mt-3">
       <div class="col-lg-5 col-md-8">
         <div class="contact-page-sidebar">
           <p>
@@ -362,10 +363,10 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                 </div>
               </div>
               <div class="col-md-12 mb-3">
-                  <div
-                      class="g-recaptcha"
-                      data-sitekey="{{ recaptcha_site_key }}">
-                  </div>
+                  <input
+                  type="hidden"
+                  name="g-recaptcha-response"
+                  id="g-recaptcha-response">
               </div>
               <button class="primary-btn3" type="submit">
                 <span data-text="Submit enquiry">Submit enquiry</span>
@@ -389,7 +390,21 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
   </div>
 </div>
 <!-- Contact Page End -->
+<script>
+grecaptcha.ready(function () {
+    grecaptcha.execute(
+        '{{ recaptcha_site_key }}',
+        {action: 'contact_form'}
+    ).then(function (token) {
 
+        console.log("TOKEN:", token);
+
+        document.getElementById(
+            'g-recaptcha-response'
+        ).value = token;
+    });
+});
+</script>
 
 
 {% endblock %}
