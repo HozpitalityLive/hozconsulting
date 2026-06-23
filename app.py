@@ -272,7 +272,17 @@ def admin_logout():
 
 @app.route('/')
 def home():
-    return render_template('pages/home.html')
+
+    latest_blogs = Blog.query.filter_by(
+        status='Published'
+    ).order_by(
+        Blog.id.desc()
+    ).limit(3).all()
+
+    return render_template(
+        'pages/home.html',
+        latest_blogs=latest_blogs
+    )
 
 
 @app.route('/contact', methods=['GET', 'POST'])

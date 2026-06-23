@@ -8,6 +8,7 @@
   Hozpitality Consulting helps hotel owners and hospitality businesses explore hospitality growth opportunities, branding strategies, hospitality networking, and industry partnerships.
 {% endblock %}
 
+
 {% block content %}
   <!-- home2 Banner Section Start -->
   <div class="home2-banner-section">
@@ -680,10 +681,10 @@
   <div class="home2-blog-section mb-140">
     <div class="container one">
       <div class="row mb-60">
-        <div class="col-xl-10 col-lg-10 col-md-9">
+        <div class="col-xl-12 col-lg-12 col-md-12">
           <div class="section-title three">
             <span class="text-anim">Latest Article</span>
-            <h2 class="text-anim">Stay informed with expert <strong>insights, industry trends, and practical guidance.</strong></h2>
+            <h2 class="text-anim">Expert hospitality consulting, <span class="fw-semibold">industry insights, and growth strategies </span> for hotels, restaurants, and hospitality businesses.</h2>
           </div>
         </div>
       </div>
@@ -691,7 +692,30 @@
 
         <div class="col-xl-12 col-lg-12 col-md-12">
           <div id="soro-blog"></div>
+
           <script src="https://app.trysoro.com/api/embed/b034eb47-5e02-408e-9299-9d3bcc5c456d" defer></script>
+
+          <script>      
+            function limitSoroCards() {
+                const cards = document.querySelectorAll('.soro-blog-card');
+
+                cards.forEach((card, index) => {
+                    card.style.display = index < 3 ? 'block' : 'none';
+                });
+            }
+
+            window.addEventListener('load', () => {
+                setTimeout(limitSoroCards, 2000);
+
+                new MutationObserver(limitSoroCards).observe(
+                    document.getElementById('soro-blog'),
+                    {
+                        childList: true,
+                        subtree: true
+                    }
+                );
+            });
+            </script>
         </div>
 
       </div>
@@ -708,5 +732,9 @@
     </div>
   </div>
   <!-- home2 Blog Section End -->
-
+<style>
+  .soro-blog-card:nth-child(n+4) {
+    display: none !important;
+  }
+</style>
 {% endblock %}

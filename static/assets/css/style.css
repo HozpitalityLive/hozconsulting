@@ -18437,7 +18437,7 @@ header.style-1.home2-header.two .primary-btn1 {
 
 .solution2-page-process-section .process-wrapper .solution2-process-card {
   padding: 60px 70px;
-  background-color: #cff0db;
+  background-color: #d6d3ff;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 50px;
@@ -30471,3 +30471,4 @@ header.style-1.home2-header.two .primary-btn1 {
     max-width: 1200px !important;
     margin: 0 auto !important;
 }
+
