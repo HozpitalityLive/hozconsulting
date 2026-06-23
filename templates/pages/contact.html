@@ -364,9 +364,9 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
               </div>
               <div class="col-md-12 mb-3">
                   <input
-                  type="hidden"
-                  name="g-recaptcha-response"
-                  id="g-recaptcha-response">
+                    type="hidden"
+                    id="g-recaptcha-response"
+                    name="g-recaptcha-response">
               </div>
               <button class="primary-btn3" type="submit">
                 <span data-text="Submit enquiry">Submit enquiry</span>
@@ -390,21 +390,6 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
   </div>
 </div>
 <!-- Contact Page End -->
-<script>
-grecaptcha.ready(function () {
-    grecaptcha.execute(
-        '{{ recaptcha_site_key }}',
-        {action: 'contact_form'}
-    ).then(function (token) {
-
-        console.log("TOKEN:", token);
-
-        document.getElementById(
-            'g-recaptcha-response'
-        ).value = token;
-    });
-});
-</script>
 
 
 {% endblock %}

@@ -7,6 +7,9 @@ from flask_admin.contrib.sqla import ModelView
 from flask_admin.form import ImageUploadField
 from datetime import datetime
 
+from random import randint
+from flask import session
+
 from flask import (
     Flask,
     render_template,
@@ -33,6 +36,7 @@ from flask_login import (
     current_user
 )
 import requests
+import time
 
 app = Flask(__name__)
 
@@ -259,6 +263,7 @@ def admin_login():
         flash('Invalid username or password', 'danger')
     return render_template('admin/login.html')
 
+
 @app.route('/admin-logout')
 @login_required
 def admin_logout():
@@ -273,8 +278,20 @@ def home():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
 
+    # Page load
+    if request.method == 'GET':
+
+        session['form_time'] = time.time()
+
+        return render_template(
+            'pages/contact.html',
+            recaptcha_site_key=app.config['RECAPTCHA_SITE_KEY']
+        )
+
+    # Form submit
     if request.method == 'POST':
 
+        # Google reCAPTCHA Validation
         captcha_response = request.form.get(
             'g-recaptcha-response'
         )
@@ -298,7 +315,6 @@ def contact():
             )
             return redirect('/contact')
 
-        # Validate action
         if result.get('action') != 'contact_form':
             flash(
                 'Invalid captcha action.',
@@ -306,21 +322,31 @@ def contact():
             )
             return redirect('/contact')
 
-        # Validate score
-        if result.get('score', 0) < 0.5:
+        if result.get('score', 0) < 0.7:
             flash(
                 'Spam activity detected.',
                 'danger'
             )
             return redirect('/contact')
 
-        full_name = request.form.get('full_name', '').strip()
-        email = request.form.get('email', '').strip()
-        phone = request.form.get('phone', '').strip()
+        full_name = request.form.get(
+            'full_name',
+            ''
+        ).strip()
+
+        email = request.form.get(
+            'email',
+            ''
+        ).strip()
+
+        phone = request.form.get(
+            'phone',
+            ''
+        ).strip()
+
         company = request.form.get('company')
         message = request.form.get('message')
 
-        # Required field validation
         if not full_name or not email or not phone:
             flash(
                 'Full Name, Email Address and Phone Number are required.',
@@ -335,7 +361,7 @@ def contact():
             msg = Message(
                 subject=f"New Hozpitality Consulting Enquiry - {full_name}",
                 sender=app.config['MAIL_USERNAME'],
-                recipients=['raj@hozpitalityconsulting.com'],
+                # recipients=['raj@hozpitalityconsulting.com'],
                 bcc=['chandanwebd1@gmail.com'],
                 reply_to=email
             )
@@ -348,14 +374,10 @@ def contact():
             <p><strong>Phone:</strong> {phone}</p>
             <p><strong>Company:</strong> {company}</p>
 
-            <p>
-                <strong>Interested In:</strong>
-                {', '.join(interests)}
-            </p>
+            <p><strong>Interested In:</strong>
+            {', '.join(interests)}</p>
 
-            <p>
-                <strong>Message:</strong>
-            </p>
+            <p><strong>Message:</strong></p>
 
             <p>{message}</p>
             """
@@ -378,10 +400,6 @@ def contact():
 
         return redirect('/contact')
 
-    return render_template(
-        'pages/contact.html',
-        recaptcha_site_key=app.config['RECAPTCHA_SITE_KEY']
-    )
 
 
 @app.route('/about')
