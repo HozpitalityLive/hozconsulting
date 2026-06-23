@@ -361,7 +361,7 @@ def contact():
             msg = Message(
                 subject=f"New Hozpitality Consulting Enquiry - {full_name}",
                 sender=app.config['MAIL_USERNAME'],
-                # recipients=['raj@hozpitalityconsulting.com'],
+                recipients=['raj@hozpitalityconsulting.com'],
                 bcc=['chandanwebd1@gmail.com'],
                 reply_to=email
             )
