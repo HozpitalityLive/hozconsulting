@@ -1,49 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google Analytics -->
-    <meta name="google-site-verification" content="googlea2ff2706ab27ec31.html" />
+    <meta
+      name="google-site-verification"
+      content="googlea2ff2706ab27ec31.html"
+    />
     <!-- Title -->
-    <title>
-      {% block title %}
-
-      {% endblock %}
-    </title>
-    <meta name="description"
+    <title>{% block title %} {% endblock %}</title>
+    <meta
+      name="description"
       content="{% block meta_description %}
 
-      {% endblock %}" />
+      {% endblock %}"
+    />
+    
+    <meta
+      property="og:image"
+      content="{% block og_image %}{{ url_for('static', filename='assets/img/innerpages/footer-logo.jpg', _external=True) }}{% endblock %}"
+    />
+
+    <meta property="og:url" content="{{ request.url }}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:image"
+      content="{% block twitter_image %}{{ url_for('static', filename='assets/img/innerpages/footer-logo.jpg', _external=True) }}{% endblock %}"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" href="{{ url_for('static', filename='assets/img/innerpages/fav-logo.ico') }}" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='assets/img/innerpages/footer-logo.jpg') }}"
+      type="image/svg+xml"
+    />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}"
+    />
     <!-- jQuery UI CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}"
+    />
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-icons.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/bootstrap-icons.css') }}"
+    />
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.min.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/animate.min.css') }}"
+    />
     <!-- FancyBox CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery.fancybox.min.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/jquery.fancybox.min.css') }}"
+    />
     <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/nice-select.css') }}"
+    />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}"
+    />
     <!-- Boxicons -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/boxicons.min.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/boxicons.min.css') }}"
+    />
     <!-- Main Style -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/style.css') }}"
+    />
 
     <!-- Bootstrap CSS (optional) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
   </head>
 
   <body class="tt-magic-cursor corporate-consulting-home">
@@ -55,7 +107,14 @@
     <!-- Back To Top -->
     <div id="scroll-percentage">
       <span id="scroll-percentage-value">0%</span>
-      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="arrow"
+        width="14"
+        height="14"
+        viewBox="0 0 14 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <g>
           <path d="M7 1.55632L14 10.8896L0 10.8896L7 1.55632Z" />
         </g>
@@ -65,40 +124,34 @@
     <!-- Main Wrapper -->
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        {% include 'partials/navbar.html' %}
-
-        {% block content %}
-
-        {% endblock %}
-
+        {% include 'partials/navbar.html' %} {% block content %} {% endblock %}
         {% include 'partials/footer.html' %}
       </div>
     </div>
-    
+
     {% if recaptcha_site_key %}
     <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
 
     <script>
-    grecaptcha.ready(function () {
-        grecaptcha.execute(
-            '{{ recaptcha_site_key }}',
-            {action: 'contact_form'}
-        ).then(function (token) {
-
-            const field = document.getElementById(
-                'g-recaptcha-response'
-            );
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("{{ recaptcha_site_key }}", { action: "contact_form" })
+          .then(function (token) {
+            const field = document.getElementById("g-recaptcha-response");
 
             if (field) {
-                field.value = token;
+              field.value = token;
             }
-        });
-    });
+          });
+      });
     </script>
     {% endif %}
 
     <!-- Email Decode -->
-    <script data-cfasync="false" src="{{ url_for('static', filename='email-decode.min.js') }}"></script>
+    <script
+      data-cfasync="false"
+      src="{{ url_for('static', filename='email-decode.min.js') }}"
+    ></script>
     <!-- jQuery -->
     <script src="{{ url_for('static', filename='assets/js/jquery-3.7.1.min.js') }}"></script>
     <!-- jQuery UI -->
@@ -122,6 +175,5 @@
     <script src="{{ url_for('static', filename='assets/js/jquery.fancybox.min.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
-
   </body>
 </html>
