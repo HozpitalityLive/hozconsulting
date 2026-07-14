@@ -2136,7 +2136,7 @@ header.style-1 {
 
 @media (max-width: 991px) {
   header.style-1 {
-    padding: 18px 0px;
+    padding: 10px 0px;
   }
 }
 
@@ -2187,7 +2187,7 @@ header.style-1 .company-logo img {
 
 @media (max-width: 576px) {
   header.style-1 .company-logo img {
-    width: 120px;
+    width: 250px;
   }
 }
 
@@ -2836,7 +2836,7 @@ header.style-1 .main-menu>ul>li>a {
   position: relative;
   font-family: var(--font-poppins);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   transition: all 0.5s ease-out 0s;
   position: relative;
 }
@@ -3533,7 +3533,7 @@ header.style-1 .main-menu>ul li.menu-item-has-children>i {
 }
 
 header.style-1 .mobile-logo-area .mobile-logo-wrap img {
-  width: 135px;
+  width: 200px;
 }
 
 header.style-1 .mobile-logo-area .mobile-logo-wrap .dark {
@@ -3604,6 +3604,7 @@ header.style-1 .contact-list li a span {
   background-size: 0px 1px;
   background-position: right 100%;
   transition: background-size 0.75s;
+  line-height: 22px;
 }
 
 header.style-1 .contact-list li a:hover span {
