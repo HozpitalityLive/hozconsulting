@@ -1,4 +1,5 @@
 {% extends 'layouts/app.html' %}
+{% from 'partials/rad-logo.html' import rad_logo_img with context %}
 
 {% block title %}
   Hospitality Consulting & Hotel Advisory | Hozpitality Consulting
@@ -55,9 +56,10 @@
                 <div class="row">
                   <div class="col-xl-8 col-lg-9">
                     <div class="banner-content">
-                      <div class="banner-title-area">
+                      <div class="banner-title-area tca-has-alliance-line">
                         <span>Helping hospitality businesses</span>
                         <h2>Hospitality Growth & Advisory for Hotel Owners and Hospitality Businesses</h2>
+                        <p class="tca-hero-alliance-line">Expanding our U.S. footprint through a strategic transaction and capital advisory alliance with RAD Commercial Realty (RadCRE).</p>
                         <a href="/contact" class="primary-btn3 two">
                           <span data-text="Schedule a Consultation">Schedule a Consultation</span>
                           <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -183,6 +185,29 @@
   </div>
   <!-- home2 Banner Section End -->
 
+  <!-- Strategic Alliance Strip Start -->
+  <div class="tca-alliance-strip">
+    <div class="container one">
+      <div class="tca-alliance-strip-wrap fade_anim" data-delay=".2">
+        <div class="tca-alliance-strip-label">
+          <span class="tca-eyebrow">Strategic Alliance</span>
+          <p>Hospitality Transaction &amp; Capital Advisory in alliance with</p>
+        </div>
+        <div class="tca-alliance-strip-partner">
+          {{ rad_logo_img('tca-rad-logo--strip') }}
+          <span class="tca-alliance-strip-name">RAD Commercial Realty (RadCRE)</span>
+        </div>
+        <a href="{{ url_for('transaction_capital_advisory') }}" class="tca-text-link">
+          <span>Explore Transaction &amp; Capital Advisory</span>
+          <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 4.5L2 9L2 0L8 4.5Z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Strategic Alliance Strip End -->
+
   <!-- About Page Intro Section Start -->
   <div class="about-page-intro-section pt-140 mb-140" id="intro-section">
     <div class="container one">
@@ -198,6 +223,9 @@
             </div>
             <div class="about-block">
               <p>Backed by the global reach of Hozpitality Group , we combine hospitality industry access, networking, and strategic advisory support to help hospitality businesses grow.</p>
+            </div>
+            <div class="about-block">
+              <p>Through our specialized partnership with RadCRE, we deliver institutional financial modeling, underwriting, and capitalization strategies to middle-market lodging properties nationwide.</p>
             </div>
             <a href="/services" class="primary-btn3 transparent">
               <span data-text="Explore solutions">Explore solutions</span>
@@ -232,7 +260,7 @@
           </div>
         </div>
       </div>
-      <div class="row g-xl-4 g-lg-3 g-md-4 g-sm-3 g-4">
+      <div class="row g-xl-4 g-lg-3 g-md-4 g-sm-3 g-4 justify-content-center">
         <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".2">
           <div class="business-challenge-card">
             <div class="initial-card-content">
@@ -374,6 +402,37 @@
             </div>
           </div>
         </div>
+
+        <div class="col-lg-4 col-sm-6 fade_anim" data-delay=".2">
+          <div class="business-challenge-card tca-service-card">
+            <div class="initial-card-content">
+              <div class="challenge-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3 33H33V35.5H3V33Z" />
+                  <path d="M5 22H10.5V31H5V22ZM13 16H18.5V31H13V16ZM21 19H26.5V31H21V19Z" />
+                  <path d="M33.5 2.5L33.5 11.5L30.3 8.3L21.6 17L16.4 11.8L7.1 21.1L5.3 19.3L16.4 8.2L21.6 13.4L28.5 6.5L25.3 3.3L33.5 2.5Z" />
+                </svg>
+              </div>
+              <span class="tca-card-no">07.</span>
+              <h3>Transaction &amp; Capital Advisory</h3>
+              <span class="card-divider"></span>
+              <p>Specialized transaction, underwriting and capital advisory for hotel owners, investors and hospitality entrepreneurs across the United States.</p>
+              <ul class="tca-card-list">
+                <li>Hotel Asset Sourcing &amp; Evaluation</li>
+                <li>Capital Stack Optimization &amp; Debt Placement</li>
+                <li>P&amp;L and Underwriting Analytics</li>
+              </ul>
+            </div>
+            <div class="hover-card-content">
+              <div class="growth-percentage-area">
+                <h2>Capital</h2>
+                <p>Transaction and capital advisory in strategic alliance with RAD Commercial Realty (RadCRE).</p>
+                <a href="{{ url_for('transaction_capital_advisory') }}" class="primary-btn1 animate-btn tca-card-btn" data-text="Explore Advisory">Explore Advisory</a>
+              </div>
+              <img src="{{ url_for('static', filename='assets/img/innerpages/cards.jpg') }}" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -430,7 +489,7 @@
           <img src="{{ url_for('static', filename='assets/img/innerpages/solution2-process-card-gradient-vector.png') }}" alt="" class="gradient-vector" />
         </div>
 
-        <div class="solution2-process-card">
+        <div class="solution2-process-card" id="hotel-investors">
           <div class="process-content-wrap">
             <div class="step-and-title-area">
               <span class="step-no">03.</span>
@@ -441,7 +500,19 @@
               <ul>
                 <li>Investment Advisory</li>
                 <li>Hospitality Market Analysis</li>
+                <li>Transaction Advisory</li>
+                <li>Asset Evaluation</li>
+                <li>Hotel Underwriting</li>
+                <li>Capital Structuring</li>
+                <li>Debt Placement</li>
+                <li>Investment Analysis</li>
               </ul>
+              <a href="{{ url_for('transaction_capital_advisory') }}" class="tca-text-link tca-text-link--card">
+                <span>Explore Transaction &amp; Capital Advisory</span>
+                <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 4.5L2 9L2 0L8 4.5Z" />
+                </svg>
+              </a>
             </div>
           </div>
           <div class="process-img">

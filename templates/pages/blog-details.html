@@ -176,6 +176,22 @@
               </ul>
             </div>
 
+            {% set tca_terms = ['invest', 'acquisition', 'capital', 'financ', 'underwrit', 'franchise', 'transaction', 'asset', 'valuation', 'debt', 'lending', 'm&a'] %}
+            {% set tca_haystack = ((blog.category or '') ~ ' ' ~ (blog.title or '') ~ ' ' ~ (blog.tags or ''))|lower %}
+            {% if tca_terms|select('in', tca_haystack)|list %}
+            <div class="tca-sidebar-widget">
+              <span class="tca-eyebrow">Transaction &amp; Capital Advisory</span>
+              <h4>Evaluating a hotel investment?</h4>
+              <p>Hotel acquisition, underwriting and capital structuring advisory, in strategic alliance with RAD Commercial Realty (RadCRE).</p>
+              <a href="{{ url_for('transaction_capital_advisory') }}" class="tca-text-link">
+                <span>Explore the advisory</span>
+                <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 4.5L2 9L2 0L8 4.5Z" />
+                </svg>
+              </a>
+            </div>
+            {% endif %}
+
             <ul class="social-list d-lg-flex d-none">
               <li>
                 <a href="https://www.facebook.com/">

@@ -1,0 +1,17 @@
+{# RAD Commercial Realty logo — renders the official supplied file unmodified.
+   Size is controlled by max-height only so the original aspect ratio is kept.
+   Until the file exists in static/assets/img/partners/, a plain text name is shown.
+   Import with context: {% from 'partials/rad-logo.html' import rad_logo_img with context %} #}
+{% macro rad_logo_img(class='') %}
+  {% if rad_logo %}
+    <img
+      src="{{ url_for('static', filename=rad_logo) }}"
+      alt="RAD Commercial Realty"
+      class="tca-rad-logo {{ class }}"
+      loading="lazy"
+      decoding="async"
+    />
+  {% else %}
+    <span class="tca-rad-logo-text {{ class }}">RAD Commercial Realty</span>
+  {% endif %}
+{% endmacro %}

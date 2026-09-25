@@ -1,0 +1,1230 @@
+/*==========================================================
+  Transaction & Capital Advisory
+  Extends the existing Hozpitality Consulting design system.
+  All selectors are prefixed with .tca- so existing
+  components are never affected. Uses tokens from style.css.
+==========================================================*/
+
+/* ---------- Shared ---------- */
+.tca-eyebrow {
+  display: inline-block;
+  color: var(--primary-color2);
+  font-family: var(--font-inteTight);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.tca-eyebrow--light {
+  color: var(--primary-color1);
+}
+
+.tca-rad-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.tca-rad-logo--strip {
+  max-height: 46px;
+}
+
+.tca-rad-logo--hero {
+  max-height: 34px;
+}
+
+.tca-rad-logo--lockup {
+  max-height: 76px;
+  margin: 0 auto;
+}
+
+/* Plain-text name shown only until the official logo file is added */
+.tca-rad-logo-text {
+  font-family: var(--font-inteTight);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--title-color);
+  text-transform: uppercase;
+}
+
+.tca-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color2);
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.tca-text-link span {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  background-position: 100% 100%;
+  transition: background-size 0.5s;
+}
+
+.tca-text-link svg {
+  fill: currentColor;
+  flex-shrink: 0;
+  transition: transform 0.4s;
+}
+
+.tca-text-link:hover {
+  color: var(--primary-color2);
+}
+
+.tca-text-link:hover span {
+  background-size: 100% 1px;
+  background-position: 0 100%;
+}
+
+.tca-text-link:hover svg {
+  transform: translateX(3px);
+}
+
+.tca-text-link--card {
+  margin-top: 25px;
+}
+
+.tca-text-link--light,
+.tca-text-link--light:hover {
+  color: var(--white-color);
+}
+
+.tca-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.tca-btn-group .primary-btn3 {
+  display: inline-flex;
+}
+
+/* Existing .primary-btn3 is nowrap with a 295px min-width: let long
+   CTA labels wrap on small screens instead of overflowing. */
+@media (max-width: 576px) {
+  .tca-btn {
+    min-width: 0;
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    min-height: 54px;
+  }
+}
+
+.primary-btn3.transparent.tca-btn--on-dark {
+  color: var(--white-color);
+  border-color: rgba(var(--white-color-opc), 0.35);
+}
+
+.primary-btn3.transparent.tca-btn--on-dark svg {
+  fill: var(--white-color);
+}
+
+.primary-btn3.transparent.tca-btn--on-dark:hover {
+  border-color: var(--primary-color1);
+}
+
+@media (max-width: 576px) {
+  .tca-card-btn {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+}
+
+/* ---------- Header: Services sub-menu ---------- */
+@media (min-width: 992px) {
+  header.style-1 .main-menu > ul > li ul.sub-menu.tca-nav-sub {
+    right: auto;
+    min-width: 280px;
+    z-index: 99;
+  }
+}
+
+/* ---------- Homepage: hero secondary line ---------- */
+.home2-banner-section .banner-title-area .tca-hero-alliance-line {
+  color: rgba(var(--white-color-opc), 0.88);
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 620px;
+  margin: 22px 0 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--primary-color1);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+}
+
+.home2-banner-slider .swiper-slide-active .banner-title-area .tca-hero-alliance-line {
+  animation: fadeInUp 1.7s;
+}
+
+.home2-banner-section .banner-title-area.tca-has-alliance-line .primary-btn3 {
+  margin-top: 32px;
+}
+
+@media (max-width: 767px) {
+  .home2-banner-section .banner-title-area .tca-hero-alliance-line {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home2-banner-section .banner-title-area .tca-hero-alliance-line {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 12px;
+  }
+
+  .home2-banner-section .banner-title-area.tca-has-alliance-line .primary-btn3 {
+    margin-top: 22px;
+  }
+}
+
+/* ---------- Homepage: strategic alliance strip ---------- */
+.tca-alliance-strip {
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--borders-color);
+}
+
+.tca-alliance-strip-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 26px 0;
+}
+
+.tca-alliance-strip-label p {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 6px 0 0;
+}
+
+.tca-alliance-strip-partner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 30px;
+  border-left: 1px solid var(--borders-color);
+  border-right: 1px solid var(--borders-color);
+}
+
+.tca-alliance-strip-name {
+  color: var(--title-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .tca-alliance-strip-wrap > * {
+    flex-shrink: 0;
+  }
+
+  .tca-alliance-strip-wrap .tca-text-link,
+  .tca-alliance-strip-wrap .tca-rad-logo-text {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 991px) {
+  .tca-alliance-strip-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .tca-alliance-strip-label {
+    width: 100%;
+  }
+
+  .tca-alliance-strip-partner {
+    border: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .tca-alliance-strip-name {
+    white-space: normal;
+    font-size: 16px;
+  }
+}
+
+/* ---------- Homepage: service card 07 ---------- */
+.home2-business-challenge-section .tca-service-card .tca-card-no {
+  display: block;
+  color: var(--dark-text-color);
+  font-family: var(--font-inteTight);
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.tca-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tca-card-list li {
+  color: var(--title-color);
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.35;
+  padding: 10px 16px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+}
+
+.home2-business-challenge-section .tca-service-card .hover-card-content .growth-percentage-area .primary-btn1 {
+  margin-top: 25px;
+}
+
+/* keep the link reachable for keyboard users */
+.home2-business-challenge-section .tca-service-card:focus-within .initial-card-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+}
+
+.home2-business-challenge-section .tca-service-card:focus-within .hover-card-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* ---------- Homepage: Hotel Investors card link ---------- */
+.solution2-page-process-section .solution2-process-card .process-content .tca-text-link--card {
+  margin-top: 25px;
+}
+
+/* ---------- Services page card ---------- */
+.tca-service-card2 .content ul li {
+  line-height: 1.35;
+}
+
+/* ---------- Cross-link band (Hotel Owners / Franchise pages) ---------- */
+.tca-crosslink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 55px 60px;
+  border-radius: 20px;
+  background-color: var(--primary-color2);
+}
+
+.tca-crosslink-content {
+  max-width: 720px;
+}
+
+.tca-crosslink-content .tca-eyebrow {
+  color: var(--primary-color1);
+  margin-bottom: 15px;
+}
+
+.tca-crosslink-content h2 {
+  color: var(--white-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.tca-crosslink-content p {
+  color: rgba(var(--white-color-opc), 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tca-crosslink .primary-btn3 {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1199px) {
+  .tca-crosslink {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 45px 40px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tca-crosslink {
+    padding: 35px 22px;
+    border-radius: 15px;
+  }
+
+  .tca-crosslink-content h2 {
+    font-size: 26px;
+  }
+}
+
+/* ---------- Blog sidebar widget ---------- */
+.tca-sidebar-widget {
+  margin-top: 30px;
+  padding: 28px 26px;
+  border: 1px solid var(--borders-color);
+  border-left: 3px solid var(--primary-color1);
+  border-radius: 10px;
+}
+
+.tca-sidebar-widget h4 {
+  font-size: 22px;
+  margin: 12px 0 10px;
+}
+
+.tca-sidebar-widget p {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/*==========================================================
+  /transaction-capital-advisory page
+==========================================================*/
+.tca-page {
+  overflow-x: clip;
+}
+
+/* ---------- Hero ---------- */
+.tca-hero .banner-content {
+  max-width: 900px;
+  margin: 0;
+}
+
+.tca-hero .tca-eyebrow {
+  margin-bottom: 20px;
+}
+
+.tca-hero .tca-hero-lead {
+  color: rgba(var(--white-color-opc), 0.9);
+  font-family: var(--font-inteTight);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.45;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.tca-hero .tca-btn-group {
+  margin-bottom: 45px;
+}
+
+.tca-hero-alliance {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  padding-top: 28px;
+  margin-bottom: 30px;
+  border-top: 1px solid rgba(var(--white-color-opc), 0.18);
+}
+
+.tca-hero-alliance-label {
+  color: rgba(var(--white-color-opc), 0.75);
+  font-family: var(--font-inteTight);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.tca-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: var(--white-color);
+  border-radius: 8px;
+}
+
+.tca-hero-alliance-name {
+  color: var(--white-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+@media (max-width: 991px) {
+  .tca-hero .tca-hero-lead {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tca-hero .tca-hero-lead {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .tca-hero .tca-btn-group {
+    margin-bottom: 35px;
+  }
+
+  .tca-hero-alliance-label {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+/* ---------- Introduction ---------- */
+.tca-intro-copy {
+  margin-top: 30px;
+}
+
+.tca-intro-copy p {
+  color: var(--text-color);
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.tca-intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.tca-glance-card {
+  padding: 40px 36px;
+  background-color: #f6f5fa;
+  border-radius: 20px;
+  border-top: 4px solid var(--primary-color1);
+}
+
+.tca-glance-title {
+  display: block;
+  color: var(--title-color);
+  font-family: var(--font-inteTight);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.tca-glance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tca-glance-list li + li {
+  border-top: 1px solid rgba(var(--black-color-opc), 0.08);
+}
+
+.tca-glance-list a {
+  display: flex;
+  gap: 14px;
+  padding: 15px 0;
+  color: var(--title-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.35;
+  transition: color 0.4s;
+}
+
+.tca-glance-list a span {
+  color: var(--primary-color2);
+  font-weight: 600;
+  min-width: 28px;
+}
+
+.tca-glance-list a:hover {
+  color: var(--primary-color2);
+}
+
+.tca-glance-note {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 18px 0 0;
+}
+
+@media (max-width: 576px) {
+  .tca-glance-card {
+    padding: 30px 22px;
+  }
+}
+
+/* ---------- Strategic alliance ---------- */
+.tca-alliance-section {
+  background-color: #f6f5fa;
+}
+
+.tca-alliance-section .section-title h2,
+.tca-services-section .section-title h2,
+.tca-serve-section .section-title h2 {
+  margin-bottom: 0;
+}
+
+.tca-lockup {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tca-lockup-item {
+  background-color: var(--white-color);
+  border: 1px solid var(--borders-color);
+  border-radius: 20px;
+  padding: 45px 35px 40px;
+  text-align: center;
+}
+
+.tca-lockup-logo {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.tca-lockup-logo img {
+  max-height: 76px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.tca-lockup-item h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.tca-lockup-item p {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tca-lockup-plus,
+.tca-compare-plus {
+  align-self: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color1);
+  color: var(--title-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.tca-alliance-note {
+  max-width: 760px;
+  margin: 35px auto 0;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .tca-lockup {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 18px;
+  }
+
+  .tca-lockup-item {
+    width: 100%;
+    padding: 35px 22px 30px;
+  }
+}
+
+/* ---------- Core advisory services (reuses solution2 process cards) ---------- */
+.tca-services-section .solution2-process-card .process-content-wrap .step-and-title-area h3 {
+  color: var(--title-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.tca-services-section .solution2-process-card .process-content-wrap .process-content p {
+  margin-bottom: 0;
+}
+
+.tca-services-section .solution2-process-card .process-content-wrap .process-content p.tca-inline-note {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.55;
+  padding-left: 12px;
+  border-left: 2px solid var(--primary-color2);
+}
+
+.tca-process-list {
+  width: 440px;
+  background-color: var(--white-color);
+  border-radius: 14px;
+  padding: 28px 30px;
+  align-self: start;
+}
+
+.tca-process-list-title {
+  display: block;
+  color: var(--dark-text-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tca-process-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.tca-process-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--title-color);
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.tca-process-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border-top: 4.5px solid transparent;
+  border-bottom: 4.5px solid transparent;
+  border-left: 7px solid var(--primary-color2);
+}
+
+.tca-services-cta {
+  margin-top: 60px;
+}
+
+@media (max-width: 1199px) {
+  .tca-process-list {
+    width: 380px;
+  }
+
+  .tca-services-section .solution2-process-card .process-content-wrap .step-and-title-area h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  .tca-process-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .tca-process-list {
+    padding: 22px 18px;
+  }
+
+  .tca-process-list ul {
+    grid-template-columns: 1fr;
+  }
+
+  .tca-services-section .solution2-process-card .process-content-wrap .step-and-title-area h3 {
+    font-size: 26px;
+  }
+
+  .tca-services-cta {
+    margin-top: 40px;
+  }
+}
+
+/* ---------- Boutique advantage ---------- */
+.tca-advantage-section {
+  background-color: var(--primary-color2);
+}
+
+.tca-advantage-section .section-title > span {
+  color: var(--primary-color1);
+}
+
+.tca-advantage-copy p {
+  color: rgba(var(--white-color-opc), 0.82);
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.tca-advantage-copy .tca-advantage-quote {
+  color: var(--white-color);
+  font-family: var(--font-inteTight);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.55;
+  padding-left: 18px;
+  border-left: 2px solid var(--primary-color1);
+  margin-bottom: 0;
+}
+
+.tca-compare {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.tca-compare-card {
+  padding: 45px 40px;
+  border-radius: 20px;
+  background-color: rgba(var(--white-color-opc), 0.06);
+  border: 1px solid rgba(var(--white-color-opc), 0.14);
+}
+
+.tca-compare-brand {
+  display: block;
+  color: var(--primary-color1);
+  font-family: var(--font-inteTight);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.tca-compare-card h3 {
+  color: var(--white-color);
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.tca-compare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tca-compare-card li {
+  color: rgba(var(--white-color-opc), 0.9);
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 13px 0;
+  border-top: 1px solid rgba(var(--white-color-opc), 0.12);
+}
+
+@media (max-width: 991px) {
+  .tca-compare {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 18px;
+  }
+
+  .tca-compare-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .tca-compare-card {
+    padding: 32px 22px;
+  }
+
+  .tca-compare-card h3 {
+    font-size: 24px;
+  }
+}
+
+/* ---------- Who we serve (reuses challenge-card2) ---------- */
+.challenge-card2.tca-serve-card {
+  height: 100%;
+  padding-bottom: 45px;
+}
+
+.challenge-card2.tca-serve-card .title-area {
+  max-width: 300px;
+  margin-bottom: 0;
+}
+
+.challenge-card2.tca-serve-card .title-area h3 {
+  color: var(--title-color);
+  font-family: var(--font-inteTight);
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.challenge-card2.tca-serve-card .tca-serve-desc {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 15px 0 0;
+}
+
+/* ---------- Advisory contact ---------- */
+.tca-contact-section {
+  background-color: #f6f5fa;
+}
+
+@media (min-width: 577px) {
+  .tca-contact-section .tca-btn-group {
+    gap: 12px;
+  }
+
+  .tca-contact-section .tca-btn {
+    min-width: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.tca-advisor-card {
+  background-color: var(--white-color);
+  border-radius: 20px;
+  border: 1px solid var(--borders-color);
+  border-top: 4px solid var(--primary-color2);
+  padding: 42px 40px;
+  box-shadow: 0 20px 50px rgba(54, 36, 108, 0.08);
+}
+
+.tca-advisor-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--borders-color);
+}
+
+.tca-advisor-monogram {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color2);
+  color: var(--primary-color1);
+  font-family: var(--font-inteTight);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+}
+
+.tca-advisor-head h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.tca-advisor-role {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.tca-advisor-contacts {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.tca-advisor-contacts li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--borders-color);
+}
+
+.tca-advisor-label {
+  min-width: 52px;
+  color: var(--dark-text-color);
+  font-family: var(--font-inteTight);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tca-advisor-contacts a {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.4;
+  word-break: break-word;
+  transition: color 0.4s;
+}
+
+.tca-advisor-contacts a:hover {
+  color: var(--primary-color2);
+}
+
+.tca-advisor-licenses {
+  margin: 22px 0 0;
+  padding: 18px 20px;
+  background-color: #f6f5fa;
+  border-radius: 10px;
+}
+
+.tca-advisor-licenses div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tca-advisor-licenses dt {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.tca-advisor-licenses dd {
+  color: var(--title-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+.tca-advisor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+@media (max-width: 576px) {
+  .tca-advisor-card {
+    padding: 30px 20px;
+  }
+
+  .tca-advisor-head h3 {
+    font-size: 24px;
+  }
+
+  .tca-advisor-contacts li {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .tca-advisor-contacts a {
+    font-size: 16px;
+    padding: 4px 0;
+  }
+
+  .tca-advisor-actions .primary-btn1 {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+}
+
+/* ---------- Related links ---------- */
+.tca-related-section {
+  background-color: #f6f5fa;
+}
+
+.tca-related-head h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.tca-related-card {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 28px 26px 50px;
+  background-color: var(--white-color);
+  border: 1px solid var(--borders-color);
+  border-radius: 14px;
+  transition: border-color 0.4s, transform 0.4s;
+}
+
+.tca-related-card,
+.tca-related-card:hover {
+  color: var(--title-color);
+}
+
+.tca-related-card h3 {
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  transition: color 0.4s;
+}
+
+.tca-related-card:hover h3 {
+  color: var(--primary-color2);
+}
+
+.tca-related-card p {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tca-related-card svg {
+  position: absolute;
+  left: 26px;
+  bottom: 24px;
+  fill: var(--primary-color2);
+  transition: transform 0.4s;
+}
+
+.tca-related-card:hover {
+  border-color: var(--primary-color2);
+  transform: translateY(-3px);
+}
+
+.tca-related-card:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---------- Final CTA + disclosure ---------- */
+.tca-final-cta-section {
+  padding-top: 90px;
+}
+
+@media (max-width: 991px) {
+  .tca-final-cta-section {
+    padding-top: 70px;
+  }
+}
+
+.tca-final-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px;
+  border-radius: 20px;
+  background-color: var(--primary-color2);
+}
+
+.tca-final-cta-content {
+  max-width: 560px;
+}
+
+.tca-final-cta-content .tca-eyebrow {
+  margin-bottom: 15px;
+}
+
+.tca-final-cta-content h2 {
+  color: var(--white-color);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.tca-final-cta-content p {
+  color: rgba(var(--white-color-opc), 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tca-final-cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.tca-final-cta-actions .tca-text-link {
+  align-self: center;
+  margin-top: 6px;
+}
+
+.tca-disclosure {
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid var(--borders-color);
+}
+
+.tca-disclosure h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tca-disclosure p {
+  color: var(--text-color);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1199px) {
+  .tca-final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 40px;
+  }
+
+  .tca-final-cta-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .tca-final-cta-actions .tca-text-link {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .tca-final-cta {
+    padding: 36px 22px;
+    border-radius: 15px;
+  }
+
+  .tca-final-cta-content h2 {
+    font-size: 28px;
+  }
+
+  .tca-final-cta-actions {
+    width: 100%;
+  }
+}

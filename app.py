@@ -440,6 +440,27 @@ def hotel_owners():
 def franchise_partnerships():
     return render_template('pages/franchise-partnerships.html')
 
+@app.route('/transaction-capital-advisory')
+def transaction_capital_advisory():
+    return render_template('pages/transaction-capital-advisory.html')
+
+
+# RAD COMMERCIAL REALTY LOGO
+# Official logo supplied by RAD Commercial Realty. Drop the file into
+# static/assets/img/partners/ as rad-commercial-realty-logo.(svg|png|webp|jpg)
+RAD_LOGO_CANDIDATES = [
+    f'assets/img/partners/rad-commercial-realty-logo.{ext}'
+    for ext in ('svg', 'png', 'webp', 'jpg')
+]
+
+
+@app.context_processor
+def inject_rad_logo():
+    for path in RAD_LOGO_CANDIDATES:
+        if os.path.exists(os.path.join(app.static_folder, path)):
+            return {'rad_logo': path}
+    return {'rad_logo': None}
+
 # BLOG LISTING PAGE
 @app.route('/blogs')
 def blogs():

@@ -286,6 +286,18 @@ supporting hotel owners, hospitality businesses, and hospitality growth initiati
                 <label class="btn" for="btncheck8"
                   >Hospitality Technology</label
                 >
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck9"
+                  name="interests"
+                  value="Transaction & Capital Advisory"
+                  {% if request.args.get('interest') == 'transaction-capital-advisory' %}checked{% endif %}
+                />
+                <label class="btn" for="btncheck9"
+                  >Transaction &amp; Capital Advisory</label
+                >
               </div>
             </div>
             <div class="contact-field-area">

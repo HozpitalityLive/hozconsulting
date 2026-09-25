@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
         <div class="col-xl-3 col-lg-4 col-md-6 fade_anim" data-delay=".2">
           <div class="challenge-card2">
             <div class="title-area">
@@ -164,6 +164,42 @@
               </div>
               <h3><a href="#">Hospitality Visibility</a></h3>
               <p class="pt-30">Helping hospitality businesses improve industry visibility through hospitality-focused media and relationship-building initiatives.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 fade_anim" data-delay=".2">
+          <div class="challenge-card2 tca-service-card2">
+            <div class="title-area">
+              <div class="icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3 33H33V35.5H3V33Z" />
+                  <path d="M5 22H10.5V31H5V22ZM13 16H18.5V31H13V16ZM21 19H26.5V31H21V19Z" />
+                  <path d="M33.5 2.5L33.5 11.5L30.3 8.3L21.6 17L16.4 11.8L7.1 21.1L5.3 19.3L16.4 8.2L21.6 13.4L28.5 6.5L25.3 3.3L33.5 2.5Z" />
+                </svg>
+              </div>
+              <h3><a href="{{ url_for('transaction_capital_advisory') }}">Transaction &amp; Capital Advisory</a></h3>
+              <p class="pt-30">Specialized transaction, underwriting and capital advisory for hotel owners, investors and hospitality entrepreneurs across the United States.</p>
+            </div>
+            <div class="content">
+              <ul>
+                {% for item in ['Hotel Asset Sourcing & Evaluation', 'Capital Stack Optimization & Debt Placement', 'P&L and Underwriting Analytics'] %}
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="18" height="18" rx="9" />
+                    <g>
+                      <path d="M12.4456 5.52897C12.6184 5.34806 12.8483 5.24804 13.0869 5.25003C13.3255 5.25201 13.5541 5.35584 13.7244 5.53961C13.8947 5.72337 13.9934 5.9727 13.9997 6.23498C14.006 6.49725 13.9194 6.75197 13.7582 6.94537L8.86357 13.6766C8.7794 13.7763 8.67782 13.8563 8.5649 13.9119C8.45198 13.9674 8.33003 13.9973 8.20636 13.9998C8.08268 14.0023 7.95981 13.9774 7.8451 13.9265C7.73038 13.8756 7.62618 13.7998 7.53872 13.7036L4.29283 10.1343C4.20243 10.0417 4.12993 9.92998 4.07965 9.80588C4.02936 9.68177 4.00232 9.54781 4.00014 9.41196C3.99796 9.27612 4.02069 9.14118 4.06696 9.01521C4.11323 8.88923 4.18211 8.77479 4.26947 8.67872C4.35684 8.58265 4.4609 8.50692 4.57547 8.45603C4.69003 8.40515 4.81273 8.38016 4.93627 8.38256C5.0598 8.38495 5.18163 8.41469 5.29449 8.46998C5.40734 8.52528 5.50892 8.60501 5.59315 8.70441L8.16189 11.5278L12.4223 5.55864C12.4299 5.54826 12.4369 5.53835 12.4456 5.52897Z" />
+                    </g>
+                  </svg>{{ item }}
+                </li>
+                {% endfor %}
+              </ul>
+              <a href="{{ url_for('transaction_capital_advisory') }}" class="tca-text-link tca-text-link--card">
+                <span>Explore Transaction &amp; Capital Advisory</span>
+                <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 4.5L2 9L2 0L8 4.5Z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

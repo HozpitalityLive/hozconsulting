@@ -1,0 +1,480 @@
+{% extends 'layouts/app.html' %}
+{% from 'partials/rad-logo.html' import rad_logo_img with context %}
+
+{% set tca_canonical = 'https://www.hozpitalityconsulting.com/transaction-capital-advisory' %}
+{% set tca_consult_url = url_for('contact', interest='transaction-capital-advisory') %}
+{% set tca_discuss_url = 'mailto:raj@hozpitalityconsulting.com?subject=Hotel%20Transaction%20Opportunity' %}
+
+{% block title %}
+  Hospitality Transaction & Capital Advisory | Hozpitality Consulting
+{% endblock %}
+
+{% block meta_description %}
+  Hospitality transaction, hotel acquisition, underwriting, capital structuring and investment advisory for hotel owners, investors and hospitality entrepreneurs across the United States.
+{% endblock %}
+
+{% block head_extra %}
+  <link rel="canonical" href="{{ tca_canonical }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hospitality Transaction & Capital Advisory | Hozpitality Consulting" />
+  <meta property="og:description" content="Hospitality transaction, hotel acquisition, underwriting, capital structuring and investment advisory for hotel owners, investors and hospitality entrepreneurs across the United States." />
+  <meta name="twitter:title" content="Hospitality Transaction & Capital Advisory | Hozpitality Consulting" />
+  <meta name="twitter:description" content="Hotel transaction, underwriting and capital advisory in strategic alliance with RAD Commercial Realty (RadCRE)." />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Hospitality Transaction & Capital Advisory",
+          "url": "{{ tca_canonical }}",
+          "description": "Hospitality transaction, hotel acquisition, underwriting, capital structuring and investment advisory for hotel owners, investors and hospitality entrepreneurs across the United States.",
+          "serviceType": [
+            "Hotel Transaction Advisory",
+            "Hotel Acquisition Advisory",
+            "Hotel Underwriting",
+            "Hotel Capital Structuring",
+            "Hotel Franchise Advisory"
+          ],
+          "areaServed": { "@type": "Country", "name": "United States" },
+          "provider": {
+            "@type": "Organization",
+            "name": "Hozpitality Consulting",
+            "url": "https://www.hozpitalityconsulting.com/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hozpitalityconsulting.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.hozpitalityconsulting.com/services" },
+            { "@type": "ListItem", "position": 3, "name": "Transaction & Capital Advisory", "item": "{{ tca_canonical }}" }
+          ]
+        }
+      ]
+    }
+  </script>
+{% endblock %}
+
+{% block content %}
+<div class="tca-page">
+
+  <!-- ============ HERO (Discover) ============ -->
+  <div class="breadcrumb-section tca-hero" style="background-image: linear-gradient(90deg, rgba(18, 11, 42, 0.92) 0%, rgba(18, 11, 42, 0.78) 50%, rgba(18, 11, 42, 0.35) 100%), url('{{ url_for('static', filename='assets/img/innerpages/bg/bg1.jpg') }}');">
+    <div class="container one">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10">
+          <div class="banner-content">
+            <span class="tca-eyebrow tca-eyebrow--light">Hozpitality Consulting</span>
+            <h1>Hospitality Transaction &amp; Capital Advisory</h1>
+            <p class="tca-hero-lead">Bridging Hospitality Operations with Institutional Real Estate Investment.</p>
+
+            <div class="tca-btn-group">
+              <a href="{{ tca_consult_url }}" class="primary-btn3 two tca-btn">
+                <span data-text="Schedule a Transaction Consultation">Schedule a Transaction Consultation</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+              </a>
+              <a href="{{ tca_discuss_url }}" class="primary-btn3 transparent tca-btn tca-btn--on-dark">
+                <span data-text="Discuss an Opportunity">Discuss an Opportunity</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+              </a>
+            </div>
+
+            <div class="tca-hero-alliance">
+              <span class="tca-hero-alliance-label">In strategic alliance with</span>
+              <span class="tca-logo-chip">{{ rad_logo_img('tca-rad-logo--hero') }}</span>
+              <span class="tca-hero-alliance-name">RAD Commercial Realty (RadCRE)</span>
+            </div>
+
+            <ul class="breadcrumb-list">
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M4.88174 0.633502L12.9342 6.57774C12.9975 6.62911 13.0485 6.69395 13.0835 6.76753C13.1185 6.84111 13.1367 6.92158 13.1367 7.00308C13.1367 7.08458 13.1185 7.16505 13.0835 7.23863C13.0485 7.31221 12.9975 7.37705 12.9342 7.42842L4.88174 13.3727C4.39775 13.5513 4.11824 13.4153 4.04321 12.9648L11.5446 7.42842C11.6078 7.37705 11.6588 7.31221 11.6939 7.23863C11.7289 7.16505 11.7471 7.08458 11.7471 7.00308C11.7471 6.92158 11.7289 6.84111 11.6939 6.76753C11.6588 6.69395 11.6078 6.62911 11.5446 6.57774L4.04691 1.04405C4.0518 0.949341 4.0819 0.857657 4.13409 0.778471C4.18628 0.699286 4.25866 0.635471 4.34376 0.59362C4.42887 0.551769 4.5236 0.5334 4.61818 0.540411C4.71275 0.547423 4.80374 0.57956 4.88174 0.633502Z" /></g></svg>
+                <a href="{{ url_for('services') }}">Services</a>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M4.88174 0.633502L12.9342 6.57774C12.9975 6.62911 13.0485 6.69395 13.0835 6.76753C13.1185 6.84111 13.1367 6.92158 13.1367 7.00308C13.1367 7.08458 13.1185 7.16505 13.0835 7.23863C13.0485 7.31221 12.9975 7.37705 12.9342 7.42842L4.88174 13.3727C4.39775 13.5513 4.11824 13.4153 4.04321 12.9648L11.5446 7.42842C11.6078 7.37705 11.6588 7.31221 11.6939 7.23863C11.7289 7.16505 11.7471 7.08458 11.7471 7.00308C11.7471 6.92158 11.7289 6.84111 11.6939 6.76753C11.6588 6.69395 11.6078 6.62911 11.5446 6.57774L4.04691 1.04405C4.0518 0.949341 4.0819 0.857657 4.13409 0.778471C4.18628 0.699286 4.25866 0.635471 4.34376 0.59362C4.42887 0.551769 4.5236 0.5334 4.61818 0.540411C4.71275 0.547423 4.80374 0.57956 4.88174 0.633502Z" /></g></svg>
+                <span aria-current="page">Transaction &amp; Capital Advisory</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero End -->
+
+  <!-- ============ INTRODUCTION (Discover) ============ -->
+  <div class="tca-intro-section pt-140 pb-140">
+    <div class="container one">
+      <div class="row gy-5 justify-content-between">
+        <div class="col-xl-7 col-lg-7 fade_anim" data-delay=".2" data-fade-from="left">
+          <div class="section-title three">
+            <span>Overview</span>
+            <h2>Where Hotel Operations Meet Institutional Real Estate Investment</h2>
+          </div>
+          <div class="tca-intro-copy">
+            <p>At Hozpitality Consulting, we bridge the gap between hotel operations and institutional real estate investment. Backed by the global reach of the Hozpitality Group ecosystem, we provide specialized, data-driven transaction advisory and capital structuring support for hotel owners, institutional buyers, and private equity investors across the United States.</p>
+            <p>Through our strategic alliance with RAD Commercial Realty (RadCRE) and Rad Capital Group, we combine hospitality market intelligence with transaction, underwriting and capital advisory capabilities.</p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-5 fade_anim" data-delay=".3" data-fade-from="right">
+          <div class="tca-glance-card">
+            <span class="tca-glance-title">Core Advisory Services</span>
+            <ol class="tca-glance-list">
+              <li><a href="#tca-service-01" data-target="#tca-service-01"><span>01.</span>Hospitality Asset Sourcing &amp; M&amp;A Advisory</a></li>
+              <li><a href="#tca-service-02" data-target="#tca-service-02"><span>02.</span>Hotel Underwriting &amp; Financial Modeling</a></li>
+              <li><a href="#tca-service-03" data-target="#tca-service-03"><span>03.</span>Capital Structuring &amp; Debt Placement</a></li>
+              <li><a href="#tca-service-04" data-target="#tca-service-04"><span>04.</span>Brand Alignment &amp; Franchise Partnerships</a></li>
+            </ol>
+            <p class="tca-glance-note">Serving hotel owners, investors and hospitality entrepreneurs across the United States.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Introduction End -->
+
+  <!-- ============ STRATEGIC ALLIANCE (Understand) ============ -->
+  <div class="tca-alliance-section pt-140 pb-140" id="strategic-alliance">
+    <div class="container one">
+      <div class="row justify-content-center mb-60">
+        <div class="col-xl-8 col-lg-9">
+          <div class="section-title three text-center">
+            <span>Partnership</span>
+            <h2>Strategic Alliance</h2>
+            <p>Through our strategic alliance with RAD Commercial Realty (RadCRE) and Rad Capital Group, we seamlessly blend hospitality market intelligence with sophisticated transaction, underwriting and capital advisory capabilities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tca-lockup fade_anim" data-delay=".2">
+        <div class="tca-lockup-item">
+          <div class="tca-lockup-logo">
+            <img src="{{ url_for('static', filename='assets/img/innerpages/logo.jpg') }}" alt="Hozpitality Consulting" loading="lazy" />
+          </div>
+          <h3>Hozpitality Consulting</h3>
+          <p>Hospitality advisory, industry relationships and market intelligence</p>
+        </div>
+        <div class="tca-lockup-plus" aria-hidden="true">+</div>
+        <div class="tca-lockup-item">
+          <div class="tca-lockup-logo">
+            {{ rad_logo_img('tca-rad-logo--lockup') }}
+          </div>
+          <h3>RAD Commercial Realty</h3>
+          <p>RadCRE and Rad Capital Group: transaction, underwriting and capital advisory</p>
+        </div>
+      </div>
+
+      <p class="tca-alliance-note">Hozpitality Consulting, RAD Commercial Realty (RadCRE) and Rad Capital Group are independent companies working together through a strategic alliance.</p>
+    </div>
+  </div>
+  <!-- Strategic Alliance End -->
+
+  <!-- ============ FOUR CORE ADVISORY SERVICES (Evaluate) ============ -->
+  <div class="solution2-page-process-section tca-services-section bg-white pt-140 pb-60" id="advisory-services">
+    <div class="container one">
+      <div class="row justify-content-center mb-70">
+        <div class="col-xxl-7 col-xl-8 col-lg-9">
+          <div class="section-title text-center">
+            <h2 class="text-anim">Our Core Advisory Services</h2>
+            <p>Hotel transaction, underwriting, capital and brand advisory, delivered with a hospitality operator's perspective.</p>
+          </div>
+        </div>
+      </div>
+
+      {% set tca_services = [
+        {
+          'no': '01', 'title': 'Hospitality Asset Sourcing & M&A Advisory',
+          'desc': 'We leverage hospitality market intelligence and industry relationships to identify and evaluate potential hotel acquisition opportunities.',
+          'items': ['Off-market acquisition opportunities', 'Hotel asset sourcing', 'Market analysis', 'Underperforming asset identification', 'Regional market evaluation', 'Portfolio fit analysis', 'Acquisition support']
+        },
+        {
+          'no': '02', 'title': 'Hotel Underwriting & Financial Modeling',
+          'desc': 'We analyze hotel operating performance and financial data to help investors evaluate asset performance and investment potential.',
+          'items': ['Hotel P&L analysis', 'STR reports', 'Average Daily Rate (ADR)', 'Revenue Per Available Room (RevPAR)', 'Cash-flow projections', 'Net Operating Income (NOI)', 'Asset valuation', 'Long-term value analysis']
+        },
+        {
+          'no': '03', 'title': 'Capital Structuring & Debt Placement',
+          'desc': 'We advise clients on hospitality financing structures and debt and equity strategies.',
+          'items': ['Capital stack optimization', 'Debt placement', 'Equity placement', 'SBA 7(a)', 'SBA 504', 'Institutional bridge financing', 'Mezzanine debt', 'Preferred equity']
+        },
+        {
+          'no': '04', 'title': 'Brand Alignment & Franchise Partnerships',
+          'desc': 'We help investors evaluate hotel brand and franchise strategies in relation to market positioning and investment objectives.',
+          'items': ['Hotel brand selection', 'Franchise exploration', 'Brand positioning', 'Franchise transition analysis', 'Property Improvement Plan (PIP) evaluation', 'Ownership transition planning']
+        }
+      ] %}
+
+      <div class="process-wrapper">
+        {% for service in tca_services %}
+        <div class="solution2-process-card tca-process-card" id="tca-service-{{ service.no }}">
+          <div class="process-content-wrap">
+            <div class="step-and-title-area">
+              <span class="step-no">{{ service.no }}.</span>
+              <h3>{{ service.title }}</h3>
+            </div>
+            <div class="process-content">
+              <p>{{ service.desc }}</p>
+              {% if service.no == '03' %}
+              <p class="tca-inline-note">Advisory only. Hozpitality Consulting is not a bank or lender; financing is provided by third-party lenders and capital providers subject to their own approval.</p>
+              {% endif %}
+            </div>
+          </div>
+          <div class="tca-process-list">
+            <span class="tca-process-list-title">Includes</span>
+            <ul>
+              {% for item in service['items'] %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="tca-btn-group justify-content-center tca-services-cta">
+        <a href="{{ tca_consult_url }}" class="primary-btn3 two tca-btn">
+          <span data-text="Schedule a Transaction Consultation">Schedule a Transaction Consultation</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+        </a>
+        <a href="{{ tca_discuss_url }}" class="primary-btn3 transparent tca-btn">
+          <span data-text="Discuss an Opportunity">Discuss an Opportunity</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Core Advisory Services End -->
+
+  <!-- ============ BOUTIQUE ADVANTAGE (Evaluate) ============ -->
+  <div class="tca-advantage-section pt-140 pb-140">
+    <div class="container one">
+      <div class="row gy-4 justify-content-between align-items-end mb-60">
+        <div class="col-xl-6 col-lg-6">
+          <div class="section-title white three">
+            <span>The Boutique Advantage</span>
+            <h2>Hospitality Intelligence. Institutional Execution.</h2>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-6">
+          <div class="tca-advantage-copy">
+            <p>By combining Hozpitality Consulting's proprietary global database with RadCRE's institutional underwriting capabilities, clients receive principal-led, personalized attention.</p>
+            <p class="tca-advantage-quote">We do not just look at real estate; we understand the living, breathing operational ecosystem of the hospitality industry.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tca-compare fade_anim" data-delay=".2">
+        <div class="tca-compare-card">
+          <span class="tca-compare-brand">Hozpitality Consulting</span>
+          <h3>Hospitality Intelligence</h3>
+          <ul>
+            <li>Hospitality network</li>
+            <li>Hotel industry expertise</li>
+            <li>Market intelligence</li>
+            <li>Hospitality operations</li>
+            <li>Industry relationships</li>
+          </ul>
+        </div>
+        <div class="tca-compare-plus" aria-hidden="true">+</div>
+        <div class="tca-compare-card">
+          <span class="tca-compare-brand">RadCRE / Rad Capital Group</span>
+          <h3>Transaction &amp; Capital Expertise</h3>
+          <ul>
+            <li>Underwriting</li>
+            <li>Financial modeling</li>
+            <li>Capital structuring</li>
+            <li>Debt / equity strategies</li>
+            <li>Transaction advisory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boutique Advantage End -->
+
+  <!-- ============ WHO WE SERVE (Evaluate) ============ -->
+  <div class="tca-serve-section pt-140 pb-140">
+    <div class="container one">
+      <div class="row justify-content-center mb-60">
+        <div class="col-xl-7 col-lg-8">
+          <div class="section-title three text-center">
+            <h2 class="text-anim">Who We Serve</h2>
+            <p>Transaction and capital advisory for owners and investors across the U.S. lodging market.</p>
+          </div>
+        </div>
+      </div>
+
+      {% set tca_audiences = [
+        {'title': 'Hotel Owners', 'desc': 'Evaluating a sale, refinancing, recapitalization or repositioning of an existing property.'},
+        {'title': 'Institutional Buyers', 'desc': 'Seeking hospitality market intelligence and underwriting support for hotel acquisitions.'},
+        {'title': 'Private Equity Investors', 'desc': 'Assessing hotel opportunities, capital structures and portfolio fit.'},
+        {'title': 'Hotel Investors', 'desc': 'Reviewing asset performance, investment potential and long-term value.'},
+        {'title': 'Hospitality Entrepreneurs', 'desc': 'Exploring a hotel acquisition, brand selection and financing structure.'}
+      ] %}
+
+      <div class="row g-4 justify-content-center">
+        {% for audience in tca_audiences %}
+        <div class="col-xl-4 col-md-6 fade_anim" data-delay=".{{ loop.index + 1 }}">
+          <div class="challenge-card2 tca-serve-card">
+            <div class="title-area">
+              <div class="icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  {% set icon = loop.index0 % 3 %}
+                  {% if icon == 0 %}
+                  <path d="M33.4817 11.99C33.1295 11.7878 32.7305 11.6814 32.3244 11.6814C31.9183 11.6814 31.5193 11.7878 31.1671 11.99L19.8001 18.5543C19.4488 18.7584 19.157 19.051 18.954 19.4029C18.7509 19.7549 18.6437 20.1539 18.6429 20.5602V33.6889C18.6476 34.0932 18.7575 34.4894 18.9619 34.8383C19.1664 35.1872 19.4581 35.4769 19.8086 35.6787C20.159 35.8805 20.556 35.9875 20.9604 35.9892C21.3647 35.9909 21.7626 35.8872 22.1147 35.6884L33.4817 29.1234C33.8311 28.9193 34.1212 28.6275 34.3231 28.2767C34.5249 27.926 34.6316 27.5286 34.6325 27.1239V13.9953C34.6352 13.589 34.5301 13.1893 34.3279 12.8369C34.1258 12.4845 33.8338 12.1927 33.4817 11.99ZM30.5242 10.8784C30.8725 10.6728 31.1612 10.38 31.3617 10.0287C31.5623 9.67753 31.6678 9.28008 31.6678 8.87564C31.6678 8.4712 31.5623 8.07375 31.3617 7.72253C31.1612 7.37131 30.8725 7.07847 30.5242 6.87292L19.1572 0.308606C18.805 0.106402 18.406 0 17.9999 0C17.5939 0 17.1948 0.106402 16.8427 0.308606L5.47568 6.87292C5.12737 7.07847 4.83869 7.37131 4.63815 7.72253C4.4376 8.07375 4.33212 8.4712 4.33212 8.87564C4.33212 9.28008 4.4376 9.67753 4.63815 10.0287C4.83869 10.38 5.12737 10.6728 5.47568 10.8784L16.8427 17.4427C17.1948 17.6449 17.5939 17.7513 17.9999 17.7513C18.406 17.7513 18.805 17.6449 19.1572 17.4427L30.5242 10.8784ZM16.1997 18.5543L4.83275 11.99C4.48058 11.7878 4.08157 11.6814 3.67548 11.6814C3.26938 11.6814 2.87038 11.7878 2.5182 11.99C2.16613 12.1927 1.87412 12.4852 1.67195 12.8376C1.46977 13.19 1.36467 13.5897 1.36736 13.9959V27.1245C1.36828 27.5292 1.47497 27.9266 1.67684 28.2774C1.87871 28.6281 2.16875 28.92 2.5182 29.1241L13.8852 35.6877C14.2373 35.8866 14.6352 35.9903 15.0395 35.9886C15.4439 35.9869 15.8409 35.8799 16.1913 35.678C16.5417 35.4762 16.8335 35.1866 17.0379 34.8377C17.2424 34.4887 17.3523 34.0926 17.357 33.6882V20.5596C17.3562 20.1533 17.249 19.7542 17.0459 19.4023C16.8429 19.0503 16.5511 18.7584 16.1997 18.5543Z" />
+                  {% elif icon == 1 %}
+                  <path d="M4.56213 14.0422H8.04555V31.0938H4.56213V14.0422ZM10.5908 14.0422H14.0742V31.0938H10.5908V14.0422ZM16.3716 14.0422H19.855V31.0938H16.3716V14.0422Z" />
+                  <path d="M30.8959 18.4031C30.8959 22.5047 27.6595 25.8647 23.6053 26.0648V28.2341C28.8557 28.0322 33.065 23.7001 33.065 18.4029C33.065 12.9775 28.6495 8.5636 23.2223 8.5636H8.27844V10.7317H23.2224C27.4536 10.7317 30.896 14.173 30.896 18.403L30.8959 18.4031Z" />
+                  <path d="M23.2224 5.62958H8.27842V7.7977H23.2224C29.072 7.7977 33.831 12.5552 33.831 18.403C33.831 24.1225 29.2783 28.7983 23.6054 29.0006V31.1707C30.4745 30.9675 35.9999 25.3181 35.9999 18.403C35.9999 11.3597 30.268 5.62958 23.2224 5.62958ZM5.68305 7.66787C5.68305 6.10164 4.40834 4.82739 2.8415 4.82739C1.27466 4.82739 -0.00012207 6.10164 -0.00012207 7.66787C-0.00012207 9.2341 1.27466 10.5083 2.8415 10.5083C4.40834 10.5083 5.68305 9.2341 5.68305 7.66787Z" />
+                  {% else %}
+                  <path d="M4.23535 18.0001C4.23535 25.6024 10.3977 31.7648 18.0001 31.7648V4.23535C10.3977 4.23535 4.23535 10.3977 4.23535 18.0001Z" />
+                  <path d="M18 1.05859C8.65865 1.05859 1.05884 8.65841 1.05884 17.9998C1.05884 27.3411 8.65865 34.9409 18 34.9409C27.3414 34.9409 34.9412 27.3411 34.9412 17.9998C34.9412 8.65841 27.3414 1.05859 18 1.05859ZM18 32.8233C9.82632 32.8233 3.17648 26.1735 3.17648 17.9998C3.17648 9.82608 9.82632 3.17624 18 3.17624C26.1737 3.17624 32.8235 9.82608 32.8235 17.9998C32.8235 26.1735 26.1737 32.8233 18 32.8233Z" />
+                  {% endif %}
+                </svg>
+              </div>
+              <h3>{{ audience.title }}</h3>
+              <p class="tca-serve-desc">{{ audience.desc }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- Who We Serve End -->
+
+  <!-- ============ ADVISORY CONTACT (Connect) ============ -->
+  <div class="tca-contact-section pt-140 pb-140" id="advisory-contact">
+    <div class="container one">
+      <div class="row gy-5 justify-content-between align-items-center">
+        <div class="col-xl-6 col-lg-6 fade_anim" data-delay=".2" data-fade-from="left">
+          <div class="section-title three">
+            <span>Connect</span>
+            <h2>Discuss a Hotel Transaction or Capital Opportunity</h2>
+            <p>Whether you are evaluating an acquisition, planning a refinancing or reviewing a brand transition, start the conversation with our hospitality transaction advisory team.</p>
+          </div>
+          <div class="tca-btn-group pt-40">
+            <a href="{{ tca_consult_url }}" class="primary-btn3 two tca-btn">
+              <span data-text="Schedule a Transaction Consultation">Schedule a Transaction Consultation</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+            </a>
+            <a href="{{ tca_discuss_url }}" class="primary-btn3 transparent tca-btn">
+              <span data-text="Discuss an Opportunity">Discuss an Opportunity</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-xl-5 col-lg-6 fade_anim" data-delay=".3" data-fade-from="right">
+          <div class="tca-advisor-card">
+            <div class="tca-advisor-head">
+              <div class="tca-advisor-monogram" aria-hidden="true">RB</div>
+              <div>
+                <h3>Raj Bhatt</h3>
+                <span class="tca-advisor-role">Hospitality Transaction Advisory</span>
+              </div>
+            </div>
+
+            <ul class="tca-advisor-contacts">
+              <li>
+                <span class="tca-advisor-label">Cell</span>
+                <a href="tel:+14243166627">(424) 316-6627</a>
+              </li>
+              <li>
+                <span class="tca-advisor-label">Email</span>
+                <a href="mailto:raj@radcre.com">raj@radcre.com</a>
+              </li>
+              <li>
+                <span class="tca-advisor-label">Email</span>
+                <a href="mailto:raj@hozpitalityconsulting.com">raj@hozpitalityconsulting.com</a>
+              </li>
+            </ul>
+
+            <dl class="tca-advisor-licenses">
+              <div>
+                <dt>CA DRE License #:</dt>
+                <dd>02449427</dd>
+              </div>
+              <div>
+                <dt>Broker CA DRE License #:</dt>
+                <dd>02126758</dd>
+              </div>
+            </dl>
+
+            <div class="tca-advisor-actions">
+              <a href="mailto:raj@hozpitalityconsulting.com" class="primary-btn1 animate-btn tca-card-btn" data-text="Contact Raj Bhatt">Contact Raj Bhatt</a>
+              <a href="tel:+14243166627" class="primary-btn1 transparent animate-btn tca-card-btn" data-text="Call (424) 316-6627">Call (424) 316-6627</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Advisory Contact End -->
+
+  <!-- ============ RELATED (Internal links) ============ -->
+  <div class="tca-related-section pb-140">
+    <div class="container one">
+      <div class="tca-related-head">
+        <h2>Explore Related Advisory</h2>
+      </div>
+      <div class="row g-4">
+        {% set tca_related = [
+          {'title': 'Hospitality Advisory', 'desc': 'Our full hospitality advisory and growth services.', 'url': url_for('services')},
+          {'title': 'Hotel Owners & Investors', 'desc': 'Advisory for hotel owners and hospitality businesses.', 'url': url_for('hotel_owners')},
+          {'title': 'Brand & Franchise Exploration', 'desc': 'Hospitality partnerships and franchise relationships.', 'url': url_for('franchise_partnerships')},
+          {'title': 'Industry Insights', 'desc': 'Articles on hospitality growth, branding and investment.', 'url': url_for('blogs')},
+          {'title': 'Contact Us', 'desc': 'Reach the Hozpitality Consulting team.', 'url': url_for('contact')}
+        ] %}
+        {% for link in tca_related %}
+        <div class="col-xl col-lg-4 col-md-6">
+          <a href="{{ link.url }}" class="tca-related-card">
+            <h3>{{ link.title }}</h3>
+            <p>{{ link.desc }}</p>
+            <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 4.5L2 9L2 0L8 4.5Z" /></svg>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- Related End -->
+
+  <!-- ============ FINAL CTA (Schedule) ============ -->
+  <div class="tca-final-cta-section mb-140">
+    <div class="container one">
+      <div class="tca-final-cta fade_anim" data-delay=".2">
+        <div class="tca-final-cta-content">
+          <span class="tca-eyebrow tca-eyebrow--light">Schedule a Consultation</span>
+          <h2>Ready to evaluate your next hotel transaction?</h2>
+          <p>Speak with Hozpitality Consulting about hotel acquisitions, underwriting, capital structuring and brand strategy.</p>
+        </div>
+        <div class="tca-final-cta-actions">
+          <a href="{{ tca_consult_url }}" class="primary-btn3 two tca-btn">
+            <span data-text="Schedule a Transaction Consultation">Schedule a Transaction Consultation</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+          </a>
+          <a href="{{ tca_discuss_url }}" class="primary-btn3 transparent tca-btn tca-btn--on-dark">
+            <span data-text="Discuss an Opportunity">Discuss an Opportunity</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><path d="M8.88883 5L2.22217 10L2.22217 0L8.88883 5Z" /></g></svg>
+          </a>
+          <a href="#advisory-contact" data-target="#advisory-contact" class="tca-text-link tca-text-link--light">
+            <span>Contact Raj Bhatt</span>
+            <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 4.5L2 9L2 0L8 4.5Z" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="tca-disclosure">
+        <h2>Important Information</h2>
+        <p>Hozpitality Consulting provides hospitality advisory services and is not a bank, lender or financial institution. Any financing is subject to the review, approval and terms of third-party lenders or capital providers. No acquisition, financing approval, funding amount or investment return is guaranteed. Hozpitality Consulting, RAD Commercial Realty (RadCRE) and Rad Capital Group are independent companies working together through a strategic alliance.</p>
+        <p>Raj Bhatt &middot; CA DRE License #: 02449427 &middot; Broker CA DRE License #: 02126758</p>
+      </div>
+    </div>
+  </div>
+  <!-- Final CTA End -->
+
+</div>
+{% endblock %}
