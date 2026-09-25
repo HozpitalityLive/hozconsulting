@@ -1913,6 +1913,7 @@ body.tt-magic-cursor #magic-cursor {
   list-style: none;
   display: flex;
   align-items: center;
+      font-size: 12px;
   gap: 70px;
 }
 
