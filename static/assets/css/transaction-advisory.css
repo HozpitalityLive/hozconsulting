@@ -146,7 +146,7 @@
 
 /* ---------- Header: Services sub-menu ---------- */
 @media (min-width: 992px) {
-  header.style-1 .main-menu > ul > li ul.sub-menu.tca-nav-sub {
+  header.style-1 .main-menu>ul>li ul.sub-menu.tca-nav-sub {
     right: auto;
     min-width: 280px;
     z-index: 99;
@@ -234,7 +234,7 @@
 }
 
 @media (min-width: 1200px) {
-  .tca-alliance-strip-wrap > * {
+  .tca-alliance-strip-wrap>* {
     flex-shrink: 0;
   }
 
@@ -534,7 +534,7 @@
   margin: 0;
 }
 
-.tca-glance-list li + li {
+.tca-glance-list li+li {
   border-top: 1px solid rgba(var(--black-color-opc), 0.08);
 }
 
@@ -610,7 +610,7 @@
 }
 
 .tca-lockup-logo img {
-  max-height: 76px;
+  max-height: 150px;
   max-width: 100%;
   width: auto;
   height: auto;
@@ -783,7 +783,7 @@
   background-color: var(--primary-color2);
 }
 
-.tca-advantage-section .section-title > span {
+.tca-advantage-section .section-title>span {
   color: var(--primary-color1);
 }
 
@@ -1184,16 +1184,17 @@
 }
 
 .tca-disclosure h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .tca-disclosure p {
   color: var(--text-color);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 8px;
+  font-family: 'Inter Tight';
 }
 
 @media (max-width: 1199px) {
