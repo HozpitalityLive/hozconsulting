@@ -1006,7 +1006,7 @@ body.tt-magic-cursor #magic-cursor {
 @media (max-width: 576px) {
   #scroll-percentage {
     right: 15px;
-    bottom: 20px;
+    bottom: 40px;
   }
 }
 
@@ -1362,7 +1362,7 @@ body.tt-magic-cursor #magic-cursor {
 }
 
 .section-title>span {
-  color: var(--title-color);
+  color: var(--dark-text-color);
   font-family: var(--font-inteTight);
   font-size: 18px;
   font-weight: 500;
@@ -9956,7 +9956,7 @@ header.style-1.home2-header.two .primary-btn1 {
 
 @media (max-width: 991px) {
   .footer-section .footer-main-wrap {
-    padding: 70px 0 60px;
+    padding: 20px 0 60px;
   }
 }
 
@@ -10136,7 +10136,7 @@ header.style-1.home2-header.two .primary-btn1 {
 
 .footer-section .footer-main-wrap .footer-widget .footer-menu-list li {
   line-height: 1;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 }
 
 .footer-section .footer-main-wrap .footer-widget .footer-menu-list li:last-child {
@@ -10571,6 +10571,7 @@ header.style-1.home2-header.two .primary-btn1 {
   .home2-banner-section .banner-warpper .banner-content-wrap .banner-content .banner-title-area>span {
     font-size: 14px;
     letter-spacing: 0.3em;
+    line-height: 20px;
   }
 }
 
@@ -10642,7 +10643,7 @@ header.style-1.home2-header.two .primary-btn1 {
   .home2-banner-section .banner-warpper .banner-content-wrap .banner-content .banner-title-area h1,
   .home2-banner-section .banner-warpper .banner-content-wrap .banner-content .banner-title-area h2 {
     font-size: 35px;
-    line-height: 50px;
+    line-height: 42px;
   }
 }
 
@@ -17150,7 +17151,7 @@ header.style-1.home2-header.two .primary-btn1 {
 
 @media (max-width: 991px) {
   .breadcrumb-section {
-    padding: 170px 0 100px;
+    padding: 100px 0 100px;
   }
 }
 
@@ -30473,3 +30474,4 @@ header.style-1.home2-header.two .primary-btn1 {
     margin: 0 auto !important;
 }
 
+/* New css for pagination */

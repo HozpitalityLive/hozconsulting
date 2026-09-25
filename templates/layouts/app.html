@@ -2,13 +2,10 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Google Analytics -->
-    <meta
-      name="google-site-verification"
-      content="googlea2ff2706ab27ec31.html"
-    />
+    <meta name="google-site-verification" content="googlea2ff2706ab27ec31.html"/>
     <!-- Title -->
     <title>{% block title %} {% endblock %}</title>
     <meta
@@ -17,21 +14,18 @@
 
       {% endblock %}"
     />
-    
+
     <meta
       property="og:image"
       content="{% block og_image %}{{ url_for('static', filename='assets/img/innerpages/footer-logo.jpg', _external=True) }}{% endblock %}"
     />
 
     <meta property="og:url" content="{{ request.url }}" />
-
     <meta name="twitter:card" content="summary_large_image" />
-
     <meta
       name="twitter:image"
       content="{% block twitter_image %}{{ url_for('static', filename='assets/img/innerpages/footer-logo.jpg', _external=True) }}{% endblock %}"
     />
-
     <!-- Favicon -->
     <link
       rel="icon"
@@ -148,10 +142,7 @@
     {% endif %}
 
     <!-- Email Decode -->
-    <script
-      data-cfasync="false"
-      src="{{ url_for('static', filename='email-decode.min.js') }}"
-    ></script>
+    <script data-cfasync="false" src="{{ url_for('static', filename='email-decode.min.js') }}"></script>
     <!-- jQuery -->
     <script src="{{ url_for('static', filename='assets/js/jquery-3.7.1.min.js') }}"></script>
     <!-- jQuery UI -->
